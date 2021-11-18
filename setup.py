@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 from setuptools import setup
 from setuptools.command.install import install
 
+__all__ = ['jotaviz']
 
 package_name = 'jotaviz'
 

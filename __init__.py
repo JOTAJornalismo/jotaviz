@@ -1,1 +1,1 @@
-from jotaviz import __all__
+from .jotaviz import jotaviz

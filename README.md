@@ -33,19 +33,19 @@ Please see the [FAQ](https://github.com/JOTAJornalismo/jotaviz#faq) section for 
 
 ```python
 import matplotlib.pyplot as plt
-plt.style.use('extensys')
+plt.style.use('jotaviz')
 ```
 
 Available styles include: 
 
 ```python
-extensys, extensys-pl, extensys-gd, extensys-nb, extensys-sc
+jotaviz, jotaviz-black, jotaviz-white, jotaviz-glass
 ```
 
 To use any of the styles temporarily, you can use:
 
 ```python
-with plt.style.context(['extensys']):
+with plt.style.context(['jotaviz']):
     plt.figure()
     plt.plot(x, y)
     plt.show()
@@ -60,30 +60,23 @@ plt.savefig("figures/fig1" + ".pdf", dpi=1000)
 ## Examples
 <p /p>
 
-The ```extensys``` style:
+The ```jotaviz``` style:
 
 <img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/fig1.png" width=500>
 
 
 <p /p>
 
-The ```extensys-ms``` style (with markers)
+The ```jotaviz-white``` style (with markers)
 
 <img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/fig2.png" width=500>
 
 
 <p /p>
 
-The ```extensys-gd``` style (with grid)
+The ```jotaviz-black``` style (with grid)
 
 <img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/fig3.png" width=500>
-
-
-<p /p>
-
-The ```extensys-nb``` style (with jupyter notebook)
-
-<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/fig4.png" width=500>
 
 
 <p /p>
@@ -91,28 +84,6 @@ The ```extensys-nb``` style (with jupyter notebook)
 The ```extensys``` + ```dark_background``` style
 
 <img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/fig5.png" width=500>
-
-
-<p /p>
-
-The ```extensys-sc``` style (with scatter)
-
-<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/fig6.png" width=500>
-
-
-
-<p /p>
-
-The ```extensys-pl``` plain style
-
-<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/fig7.png" width=600>
-
-
-<p /p>
-
-Plotting multiple left and right y-axis using ```extensys``` style
-
-<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/fig8.png" width=600>
 
 
 ## Help and Contribution
