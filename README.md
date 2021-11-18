@@ -16,6 +16,11 @@ python3 -m pip install jotaviz
 
 # to install latest commit (from GitHub)
 pip install git+https://github.com/JOTAJornalismo/jotaviz.git
+
+# to clone and install from a local copy
+git clone https://github.com/JOTAJornalismo/jotaviz.git
+cd jotaviz
+pip install -e .
 ```
 
 The pip installation will automatically move all of the Matplotlib style files ```*.mplstyle``` into the appropriate directory on your computer.
