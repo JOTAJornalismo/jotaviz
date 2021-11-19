@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """Install jotaviz.
 
 This will copy the *.mplstyle files into the right directory.
@@ -36,7 +33,7 @@ def install_styles():
         os.makedirs(mpl_stylelib_dir)
 
     # copy files over
-    print(f"Installing styles into {mpl_stylelib_dir}")
+    print(f'Installing styles into {mpl_stylelib_dir}')
     for style_file in style_files:
         shutil.copy(style_file,
                     os.path.join(mpl_stylelib_dir, os.path.basename(style_file)))
