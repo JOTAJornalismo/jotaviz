@@ -114,14 +114,16 @@ savefig.edgecolor: black
 ##***************************************************************************************************
 # set legend
 ##***************************************************************************************************
-legend.loc: upper right
+legend.loc: best
 legend.frameon: False
-legend.fancybox: False
+legend.fancybox: True
 legend.title_fontsize: 10
 legend.labelspacing: 0.3
 legend.fontsize: 14
 legend.columnspacing: 1.0
 legend.borderaxespad: -0.5
+legend.handlelength: 0.7
+legend.handletextpad: 0.2
 
 ##***************************************************************************************************
 # Set Grid lines
@@ -139,3 +141,10 @@ boxplot.capprops.color: white
 boxplot.flierprops.color: white
 boxplot.flierprops.markeredgecolor: white
 boxplot.whiskerprops.color: white
+
+##***************************************************************************************************
+# Date
+##***************************************************************************************************
+date.autoformatter.year: %Y
+date.autoformatter.month: %b %Y
+date.autoformatter.day: %b %d %Y

@@ -1,63 +1,86 @@
-# MATPLOTLIB style for Jupyter notebooks
-#
-# This is the style for "extensys-plot"
+# Matplotlib jotaviz format
+# This is the style for "jotaviz-plot"
 # see: https://github.com/JOTAJornalismo/jotaviz/
 
 ##***************************************************************************************************
 # set color
 ##***************************************************************************************************
-axes.prop_cycle: cycler('color', ['D2B48C', '778899', 'FF0000', '0000CD', 'FF4500', '00FF00', '00BFFF', '00FFFF', 'F4A460', 'FFD700', '32CD32', 'FF1493', 'D2691E', '008080', '800000', '000000', '8B0000', 'FFFF00', '4B0082','000080'])
+axes.prop_cycle: cycler('color', ['e41a1c', '377eb8', '4daf4a', '984ea3', 'ff7f00', 'ffff33', 'a65628', 'f781bf', '232323', '000000'])
+
 
 ##***************************************************************************************************
 # set font
 ##***************************************************************************************************
 font.family: roboto
-font.size : 16
+font.style: normal
+font.variant: normal
+font.weight: normal
+font.stretch: normal
+font.size: 16
+text.color: 3B3B3B
+mathtext.fontset: dejavuserif
+
+
+##***************************************************************************************************
+# set facecolor
+##***************************************************************************************************
+figure.facecolor: e8eaeb
+figure.edgecolor: e8eaeb
 
 
 ##***************************************************************************************************
 # set Axes
 ##***************************************************************************************************
-axes.linewidth: 1.0
+axes.linewidth: 1.25
 axes.labelpad : 6.0
 axes.xmargin: 0
 axes.ymargin: 0
 axes.labelweight: normal
 axes.labelsize: 16
+axes.facecolor: e8eaeb
+axes.edgecolor: 3B3B3B
+axes.labelcolor: 3B3B3B
+axes.axisbelow: True 
 axes.autolimit_mode: round_numbers
-axes.titlesize: 16
-grid.linewidth: 1
+axes.unicode_minus: True
+axes.spines.left: False
+axes.spines.right: False
+axes.spines.top: False
+axes.spines.bottom: False
 
 
 ##***************************************************************************************************
 # set xAxis
 ##***************************************************************************************************
-xtick.major.size: 6
-xtick.minor.size: 3
-xtick.major.width: 1
-xtick.minor.width: 1
+xtick.major.size: 5
+xtick.minor.size: 0
+xtick.major.width: 1.2
+xtick.minor.width: 1.0
 xtick.major.pad: 5
 xtick.minor.visible: True
 xtick.top: False
 xtick.labelsize: 16
+xtick.direction: in
+xtick.color: 3B3B3B
 
 
 ##***************************************************************************************************
 # set yAxis
 ##***************************************************************************************************
-ytick.major.size: 6
-ytick.minor.size: 3
-ytick.major.width: 1
-ytick.minor.width: 1
+ytick.major.size: 5
+ytick.minor.size: 2
+ytick.major.width: 1.2
+ytick.minor.width: 1.0
 ytick.major.pad: 5
 ytick.minor.visible: True
 ytick.right: True
 ytick.labelsize: 16
+ytick.color: 3B3B3B
 
 ##***************************************************************************************************
 # set figure
 ##***************************************************************************************************
-figure.figsize: 8, 6
+figure.figsize: 9, 6
 figure.subplot.left: 0.177
 figure.subplot.right: 0.946
 figure.subplot.bottom: 0.156
@@ -67,10 +90,10 @@ figure.subplot.top: 0.965
 ##***************************************************************************************************
 # set marker properties
 ##***************************************************************************************************
-lines.markersize: 12
-lines.linewidth: 2.0
+lines.markersize: 10
+lines.markeredgewidth: 2
 lines.markerfacecolor: none
-lines.markeredgewidth: 0.8
+lines.solid_capstyle: butt
 
 
 ##***************************************************************************************************
@@ -80,20 +103,37 @@ savefig.bbox: tight
 savefig.pad_inches: 0.05
 savefig.dpi: 500
 savefig.format: png
-
+savefig.facecolor: e8eaeb
+savefig.edgecolor: e8eaeb
 
 ##***************************************************************************************************
 # set legend
 ##***************************************************************************************************
-legend.loc: upper right
+legend.loc: best
 legend.frameon: False
-legend.title_fontsize : 16
+legend.fancybox: True
+legend.title_fontsize: 10
 legend.labelspacing: 0.3
-legend.fontsize: 16
+legend.fontsize: 14
 legend.columnspacing: 1.0
-legend.borderaxespad: -0.8
+legend.borderaxespad: -0.5
+legend.handlelength: 0.7
+legend.handletextpad: 0.2
 
-##****************************************************************************************************
-# Use LaTeX for math formatting
-##****************************************************************************************************
-text.usetex: False
+##***************************************************************************************************
+# Set Grid lines
+##***************************************************************************************************
+axes.grid: True
+grid.color: k
+grid.alpha: 0.5
+grid.linewidth: 0.4
+grid.linestyle: --
+
+
+##***************************************************************************************************
+# Date
+##***************************************************************************************************
+date.autoformatter.year: %Y
+date.autoformatter.month: %b %Y
+date.autoformatter.day: %b %d %Y
+
