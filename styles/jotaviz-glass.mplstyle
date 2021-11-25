@@ -14,7 +14,7 @@ axes.prop_cycle: cycler('color', ['e41a1c', '377eb8', '4daf4a', '984ea3', 'ff7f0
 font.family: roboto
 font.style: normal
 font.variant: normal
-font.weight: normal
+font.weight: medium
 font.stretch: normal
 font.size: 16
 text.color: 3B3B3B
@@ -114,7 +114,7 @@ legend.frameon: False
 legend.fancybox: True
 legend.title_fontsize: 10
 legend.labelspacing: 0.3
-legend.fontsize: 14
+legend.fontsize: x-small
 legend.columnspacing: 1.0
 legend.borderaxespad: -0.5
 legend.handlelength: 0.7

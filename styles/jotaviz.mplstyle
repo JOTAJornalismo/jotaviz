@@ -8,16 +8,19 @@
 axes.prop_cycle: cycler('color', ['e41a1c', '377eb8', '4daf4a', '984ea3', 'ff7f00', 'ffff33', 'a65628', 'f781bf', '232323', '000000'])
 
 
+patch.edgecolor: white
+patch.linewidth: 0.0
+
 ##***************************************************************************************************
 # set font
 ##***************************************************************************************************
 font.family: roboto
 font.style: normal
 font.variant: normal
-font.weight: normal
+font.weight: medium
 font.stretch: normal
 font.size: 16
-text.color: 3B3B3B
+text.color: 222222
 mathtext.fontset: dejavuserif
 
 
@@ -38,8 +41,8 @@ axes.ymargin: 0
 axes.labelweight: normal
 axes.labelsize: 16
 axes.facecolor: e8eaeb
-axes.edgecolor: 3B3B3B
-axes.labelcolor: 3B3B3B
+axes.edgecolor: 222222
+axes.labelcolor: 222222
 axes.axisbelow: True 
 axes.autolimit_mode: round_numbers
 axes.unicode_minus: True
@@ -61,7 +64,7 @@ xtick.minor.visible: True
 xtick.top: False
 xtick.labelsize: 16
 xtick.direction: in
-xtick.color: 3B3B3B
+xtick.color: 444444
 
 
 ##***************************************************************************************************
@@ -75,7 +78,7 @@ ytick.major.pad: 5
 ytick.minor.visible: True
 ytick.right: True
 ytick.labelsize: 16
-ytick.color: 3B3B3B
+ytick.color: 444444
 
 ##***************************************************************************************************
 # set figure
@@ -112,9 +115,10 @@ savefig.edgecolor: e8eaeb
 legend.loc: best
 legend.frameon: False
 legend.fancybox: True
+legend.framealpha: 0.5
 legend.title_fontsize: 10
 legend.labelspacing: 0.3
-legend.fontsize: 14
+legend.fontsize: x-small
 legend.columnspacing: 1.0
 legend.borderaxespad: -0.5
 legend.handlelength: 0.7
