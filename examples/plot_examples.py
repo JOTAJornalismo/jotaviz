@@ -4,8 +4,21 @@ import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import random
+import jotaviz
 
 from utils import is_exist_dir, make_patch_spines_invisible
+
+def test_plotting_working():
+    plt.style.use("jotaviz")
+    values = {c: [random.randint(0, 10) for _ in range(7)] for c in 'ABCDEF'}
+    df = pd.DataFrame(values)
+
+    df.plot(marker='o')
+    jotaviz.jotaviz_footnote()
+
+    plt.savefig("figures/test.png")
+
 
 
 def g(x, m, L=1.0):
