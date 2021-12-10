@@ -117,7 +117,7 @@ savefig.edgecolor: white
 # set legend
 ##***************************************************************************************************
 legend.loc: best
-legend.frameon: False
+legend.frameon: True
 legend.fancybox: True
 legend.title_fontsize: 10
 legend.labelspacing: 0.3

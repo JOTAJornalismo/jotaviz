@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """Install jotaviz.
 
 This will copy the *.mplstyle files into the right directory.
@@ -9,14 +12,10 @@ import glob
 import os
 import shutil
 
-import matplotlib
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 from setuptools import setup
 from setuptools.command.install import install
-
-__all__ = ['jotaviz']
-
-package_name = 'jotaviz'
 
 # Get the description from README
 root = os.path.abspath(os.path.dirname(__file__))
@@ -25,10 +24,10 @@ with open(os.path.join(root, 'README.md'), 'r', encoding='utf-8') as fb:
 
 
 def install_styles():
-    style_files = glob.glob('styles/**/*.mplstyle', recursive=True)
+    style_files = glob.glob('jotaviz/styles/**/*.mplstyle', recursive=True)
 
     # find stylelib directory, where the *.mplstyle file goes
-    mpl_stylelib_dir = os.path.join(matplotlib.get_configdir(), "stylelib")
+    mpl_stylelib_dir = os.path.join(mpl.get_configdir(), "stylelib")
     if not os.path.exists(mpl_stylelib_dir):
         os.makedirs(mpl_stylelib_dir)
 
@@ -46,12 +45,12 @@ class PostInstallation(install):
 
 
 setup(
-    name=package_name,
+    name='jotaviz',
     version='1.0.1',
-    author="Daniel Marcelino",
-    author_email="dmarcelino@live.com",
-    description="Matplotlib jotaviz style format for publications at jota.info",
-    long_description=long_description,
+    author='Daniel Marcelino',
+    author_email='daniel.marcelino@jota.info',
+    description='Matplotlib jotaviz style format for publications at jota.info',
+    long_description='Matplotlib jotaviz style and plots for publications at jota.info',
     long_description_content_type='text/markdown',
     license='MIT',
     keywords=[
@@ -60,7 +59,10 @@ setup(
         "style-publications",
         "matplotlib-figures",
         "python"],
-    url="https://github.com/JOTAJornalismo/jotaviz/",
-    install_requires=['matplotlib', 'pandas', ],
+    url='https://github.com/JOTAJornalismo/jotaviz/',
+    package_data={
+      'jotaviz': ['styles/*.mplstyle'],
+      },
+    install_requires=['matplotlib', 'pandas'],
     cmdclass={'install': PostInstallation, },
 )
