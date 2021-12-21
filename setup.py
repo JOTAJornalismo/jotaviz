@@ -46,7 +46,7 @@ class PostInstallation(install):
 
 setup(
     name='jotaviz',
-    version='1.0.1',
+    version='1.0.2',
     author='Daniel Marcelino',
     author_email='daniel.marcelino@jota.info',
     description='Matplotlib jotaviz style format for publications at jota.info',
