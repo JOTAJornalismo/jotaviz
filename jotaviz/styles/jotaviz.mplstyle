@@ -72,7 +72,7 @@ xtick.minor.pad: 5 # distance to the minor tick label in points
 xtick.minor.visible: True 
 xtick.top: False
 xtick.labelsize: 16 # fontsize of the tick labels
-xtick.direction: out  # direction: in, out, or inout
+xtick.direction: in  # direction: in, out, or inout
 xtick.color: 444444
 
 
