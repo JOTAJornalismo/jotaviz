@@ -29,7 +29,6 @@ text.color: 222222
 mathtext.fontset: dejavuserif
 figure.titlesize: 20
 figure.titleweight: bold
-figure.titlecolor: 111111
 
 ##***************************************************************************************************
 # set facecolor
@@ -41,8 +40,8 @@ figure.edgecolor: white
 ##***************************************************************************************************
 # set Axes
 ##***************************************************************************************************
-axes.linewidth: 1.0
-axes.labelpad : 6.0
+axes.linewidth: 2.0
+axes.labelpad : 5.0
 axes.xmargin: 0
 axes.ymargin: 0
 axes.labelweight: normal
@@ -57,7 +56,7 @@ axes.unicode_minus: True
 axes.spines.left: False
 axes.spines.right: False
 axes.spines.top: False
-axes.spines.bottom: False
+axes.spines.bottom: True
 axes.formatter.use_locale: True
 axes.formatter.useoffset: True 
 axes.formatter.offset_threshold: 2
