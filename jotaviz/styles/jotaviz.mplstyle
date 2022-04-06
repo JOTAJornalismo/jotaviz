@@ -46,7 +46,7 @@ axes.grid: True
 axes.labelweight: normal
 axes.labelsize: medium
 axes.titleweight: normal 
-axes.titlesize: large
+axes.titlesize: x-large
 axes.facecolor: f0f0f0
 axes.edgecolor: f0f0f0
 axes.axisbelow: True 
@@ -81,7 +81,7 @@ xtick.color: 444444
 ##***************************************************************************************************
 ytick.major.size: 10
 ytick.minor.size: 3
-ytick.major.width: 1.5
+ytick.major.width: 1.2
 ytick.minor.width: 1.0
 ytick.major.pad: 5
 ytick.minor.pad: 0
@@ -103,7 +103,7 @@ figure.subplot.bottom: 0.07
 figure.subplot.top: 0.95
 figure.subplot.hspace: 0.2
 figure.subplot.wspace: 0.2 
-figure.titlesize: x-large
+figure.titlesize: xx-large
 figure.titleweight: bold
 								
 ##***************************************************************************************************
@@ -144,14 +144,14 @@ legend.numpoints : 1
 legend.scatterpoints: 1
 legend.title_fontsize: 10
 legend.fontsize: small
-legend.borderpad: 0.3    # border whitespace in fontsize units
+legend.borderpad: 0   # border whitespace in fontsize units
 legend.markerscale: 1.0   # the relative size of legend markers vs. original
 legend.labelspacing: 0.3  # the vertical space between the legend entries in fraction of fontsize
-legend.columnspacing: 1.0 # the border between the axes and legend edge in fraction of fontsize
-legend.borderaxespad: 1.0 # the border between the axes and legend edge in fraction of fontsize
+legend.columnspacing: 0.3 # the border between the axes and legend edge in fraction of fontsize
+legend.borderaxespad: 0.3 # the border between the axes and legend edge in fraction of fontsize
 legend.handlelength: 0.5  # the length of the legend lines in fraction of fontsize
 legend.handleheight: 0.5  # the height of the legend handle in fraction of fontsize
-legend.handletextpad: 0.3 # the space between the legend line and legend text in fraction of fontsize
+legend.handletextpad: 0.5 # the space between the legend line and legend text in fraction of fontsize
 legend.facecolor: inherit 
 legend.edgecolor: inherit
 
@@ -160,7 +160,7 @@ legend.edgecolor: inherit
 ##***************************************************************************************************
 grid.color: cbcbcb
 grid.linewidth: 1.0
-grid.linestyle: --
+grid.linestyle: -
 
 ##***************************************************************************************************
 # Date
