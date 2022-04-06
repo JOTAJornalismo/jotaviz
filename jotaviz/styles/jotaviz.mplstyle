@@ -13,7 +13,7 @@ errorbar.capsize: 0
 # scatter props
 scatter.marker: o
 
-patch.edgecolor: f0f0f0
+patch.edgecolor: ebecf0
 patch.linewidth: 0.5
 patch.force_edgecolor: True
 patch.antialiased: True 
@@ -47,8 +47,8 @@ axes.labelweight: normal
 axes.labelsize: medium
 axes.titleweight: normal 
 axes.titlesize: x-large
-axes.facecolor: f0f0f0
-axes.edgecolor: f0f0f0
+axes.facecolor: ebecf0
+axes.edgecolor: ebecf0
 axes.axisbelow: True 
 axes.autolimit_mode: round_numbers
 axes.unicode_minus: True
@@ -95,8 +95,8 @@ ytick.color: 444444
 # set figure
 ##***************************************************************************************************
 figure.figsize: 9, 6
-figure.facecolor: f0f0f0
-figure.edgecolor: f0f0f0
+figure.facecolor: ebecf0
+figure.edgecolor: ebecf0
 figure.subplot.left: 0.08
 figure.subplot.right: 0.95
 figure.subplot.bottom: 0.07
@@ -130,8 +130,8 @@ savefig.bbox: tight
 savefig.pad_inches: 0.08
 savefig.dpi: 600
 savefig.format: png
-savefig.facecolor: f0f0f0
-savefig.edgecolor: f0f0f0
+savefig.facecolor: ebecf0
+savefig.edgecolor: ebecf0
 
 ##***************************************************************************************************
 # set legend
