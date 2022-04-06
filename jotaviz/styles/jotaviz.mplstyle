@@ -75,7 +75,7 @@ xtick.minor.visible: True
 xtick.top: False
 xtick.major.labelsize: 16 # fontsize of the tick labels
 xtick.minor.labelsize: 12 # fontsize of the tick labels
-xtick.direction: in  # direction: in, out, or inout
+xtick.right.direction: in  # direction: in, out, or inout
 xtick.color: 444444
 
 
@@ -88,12 +88,13 @@ ytick.major.width: 1.2
 ytick.minor.width: 0.9
 ytick.major.length: 15
 ytick.minor.length: 5
-ytick.major.pad: 5
+ytick.major.pad: 0
 ytick.minor.visible: True
 ytick.right: True
 ytick.major.labelsize: 16
 ytick.minor.labelsize: 12
-ytick.direction: inout  # direction: in, out, or inout
+ytick.left.direction: out  # direction: in, out, or inout
+ytick.right.direction: inout  # direction: in, out, or inout
 ytick.color: 444444
 
 ##***************************************************************************************************
