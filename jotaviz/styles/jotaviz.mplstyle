@@ -65,7 +65,7 @@ axes.formatter.offset_threshold: 2
 ##***************************************************************************************************
 xtick.major.size: 10 # major tick length in points
 xtick.minor.size: 0 # minor tick length in points
-xtick.major.width: 1.5  # major tick width in points
+xtick.major.width: 1.4  # major tick width in points
 xtick.minor.width: 1.0  # minor tick width in points
 xtick.major.pad: 5 # distance to major tick label in points
 xtick.minor.pad: 0 # distance to the minor tick label in points
@@ -79,9 +79,9 @@ xtick.color: 444444
 ##***************************************************************************************************
 # set yAxis
 ##***************************************************************************************************
-ytick.major.size: 10
+ytick.major.size: 8
 ytick.minor.size: 3
-ytick.major.width: 1.2
+ytick.major.width: 1.3
 ytick.minor.width: 1.0
 ytick.major.pad: 5
 ytick.minor.pad: 0
@@ -139,16 +139,16 @@ savefig.edgecolor: f0f0f0
 legend.loc: best
 legend.frameon: True
 legend.fancybox: True
-legend.framealpha: 0.5
+legend.framealpha: 0.7
 legend.numpoints : 1
 legend.scatterpoints: 1
-legend.title_fontsize: 10
+legend.title_fontsize: small
 legend.fontsize: small
 legend.borderpad: 0   # border whitespace in fontsize units
 legend.markerscale: 1.0   # the relative size of legend markers vs. original
 legend.labelspacing: 0.3  # the vertical space between the legend entries in fraction of fontsize
-legend.columnspacing: 0.3 # the border between the axes and legend edge in fraction of fontsize
-legend.borderaxespad: 0.3 # the border between the axes and legend edge in fraction of fontsize
+legend.columnspacing: 0.5 # the border between the axes and legend edge in fraction of fontsize
+legend.borderaxespad: 0.5 # the border between the axes and legend edge in fraction of fontsize
 legend.handlelength: 0.5  # the length of the legend lines in fraction of fontsize
 legend.handleheight: 0.5  # the height of the legend handle in fraction of fontsize
 legend.handletextpad: 0.5 # the space between the legend line and legend text in fraction of fontsize
