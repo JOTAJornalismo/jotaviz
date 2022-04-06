@@ -63,7 +63,7 @@ axes.formatter.offset_threshold: 2
 ##***************************************************************************************************
 # set xAxis
 ##***************************************************************************************************
-xtick.major.size: 7 # major tick length in points
+xtick.major.size: 8 # major tick length in points
 xtick.minor.size: 0 # minor tick length in points
 xtick.major.width: 1.2  # major tick width in points
 xtick.minor.width: 1.0  # minor tick width in points
@@ -72,18 +72,19 @@ xtick.minor.pad: 5 # distance to the minor tick label in points
 xtick.minor.visible: True 
 xtick.top: False
 xtick.labelsize: 16 # fontsize of the tick labels
-xtick.direction: in  # direction: in, out, or inout
+xtick.direction: out  # direction: in, out, or inout
 xtick.color: 444444
 
 
 ##***************************************************************************************************
 # set yAxis
 ##***************************************************************************************************
-ytick.major.size: 7
-ytick.minor.size: 2
+ytick.major.size: 8
+ytick.minor.size: 3
 ytick.major.width: 1.2
 ytick.minor.width: 1.0
 ytick.major.pad: 5
+ytick.minor.pad: 5
 ytick.minor.visible: True
 ytick.right: True
 ytick.labelsize: 16
@@ -137,7 +138,7 @@ legend.numpoints : 1
 legend.scatterpoints: 1
 legend.title_fontsize: 10
 legend.labelspacing: 0.3
-legend.fontsize: large
+legend.fontsize: small
 legend.columnspacing: 1.0
 legend.borderaxespad: -0.5
 legend.handlelength: 0.7
