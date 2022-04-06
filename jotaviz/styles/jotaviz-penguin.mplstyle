@@ -13,7 +13,7 @@ errorbar.capsize: 0
 # scatter props
 scatter.marker: o
 
-patch.edgecolor: ebecf0
+patch.edgecolor: f5f3ef
 patch.linewidth: 0.5
 patch.force_edgecolor: True
 patch.antialiased: True 
@@ -47,8 +47,8 @@ axes.labelweight: normal
 axes.labelsize: medium
 axes.titleweight: normal 
 axes.titlesize: x-large
-axes.facecolor: ebecf0
-axes.edgecolor: ebecf0
+axes.facecolor: f5f3ef
+axes.edgecolor: f5f3ef
 axes.axisbelow: True 
 axes.autolimit_mode: round_numbers
 axes.unicode_minus: True
@@ -95,8 +95,8 @@ ytick.color: 444444
 # set figure
 ##***************************************************************************************************
 figure.figsize: 9, 6
-figure.facecolor: ebecf0
-figure.edgecolor: ebecf0
+figure.facecolor: f5f3ef
+figure.edgecolor: f5f3ef
 figure.subplot.left: 0.08
 figure.subplot.right: 0.95
 figure.subplot.bottom: 0.07
