@@ -24,29 +24,30 @@ font.style: normal
 font.variant: normal
 font.weight: medium
 font.stretch: normal
-font.size: large
+font.size: 16
 text.color: 222222
 mathtext.fontset: dejavuserif
-figure.titlesize: xx-large
+figure.titlesize: 24
 figure.titleweight: medium 
 
 ##***************************************************************************************************
 # set facecolor
 ##***************************************************************************************************
-figure.facecolor: e8eaeb
+figure.facecolor: EBE8EA
 figure.edgecolor: white
 
 
 ##***************************************************************************************************
 # set Axes
 ##***************************************************************************************************
-axes.linewidth: 1.25
+axes.linewidth: 1.0
 axes.labelpad : 6.0
 axes.xmargin: 0
 axes.ymargin: 0
 axes.labelweight: normal
-axes.labelsize: 16
-axes.facecolor: e8eaeb
+axes.labelsize: large
+axes.titlesize: large
+axes.facecolor: EBE8EA
 axes.edgecolor: 222222
 axes.labelcolor: 222222
 axes.axisbelow: True 
@@ -71,7 +72,7 @@ xtick.major.pad: 5 # distance to major tick label in points
 xtick.minor.pad: 0 # distance to the minor tick label in points
 xtick.minor.visible: True 
 xtick.top: False
-xtick.labelsize: 16 # fontsize of the tick labels
+xtick.labelsize: large # fontsize of the tick labels
 xtick.direction: in  # direction: in, out, or inout
 xtick.color: 444444
 
@@ -87,7 +88,7 @@ ytick.major.pad: 2
 ytick.minor.pad: 2
 ytick.minor.visible: True
 ytick.right: True
-ytick.labelsize: 16
+ytick.labelsize: large
 ytick.direction: inout  # direction: in, out, or inout
 ytick.color: 444444
 
@@ -124,7 +125,7 @@ savefig.bbox: tight
 savefig.pad_inches: 0.08
 savefig.dpi: 600
 savefig.format: png
-savefig.facecolor: e8eaeb
+savefig.facecolor: EBE8EA
 savefig.edgecolor: white
 
 ##***************************************************************************************************
@@ -141,7 +142,7 @@ legend.labelspacing: 0.3
 legend.fontsize: small
 legend.columnspacing: 1.0
 legend.borderaxespad: -0.5
-legend.handlelength: 0.7
+legend.handlelength: 0.5
 legend.handletextpad: 0.3
 
 
@@ -150,8 +151,8 @@ legend.handletextpad: 0.3
 ##***************************************************************************************************
 axes.grid: True
 grid.color: k
-grid.alpha: 0.5
-grid.linewidth: 0.4
+grid.alpha: 0.4
+grid.linewidth: 0.3
 grid.linestyle: --
 
 ##***************************************************************************************************
