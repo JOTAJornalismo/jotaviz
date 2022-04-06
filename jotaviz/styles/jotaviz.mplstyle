@@ -24,10 +24,10 @@ font.style: normal
 font.variant: normal
 font.weight: medium
 font.stretch: normal
-font.size: 16
+font.size: large
 text.color: 222222
 mathtext.fontset: dejavuserif
-figure.titlesize: 22
+figure.titlesize: xx-large
 figure.titleweight: medium 
 
 ##***************************************************************************************************
@@ -65,7 +65,7 @@ axes.formatter.offset_threshold: 2
 ##***************************************************************************************************
 xtick.major.size: 8 # major tick length in points
 xtick.minor.size: 0 # minor tick length in points
-xtick.major.width: 1.2  # major tick width in points
+xtick.major.width: 1.5  # major tick width in points
 xtick.minor.width: 1.0  # minor tick width in points
 xtick.major.pad: 5 # distance to major tick label in points
 xtick.minor.pad: 0 # distance to the minor tick label in points
@@ -81,10 +81,10 @@ xtick.color: 444444
 ##***************************************************************************************************
 ytick.major.size: 8
 ytick.minor.size: 3
-ytick.major.width: 1.2
+ytick.major.width: 1.3
 ytick.minor.width: 1.0
-ytick.major.pad: 0
-ytick.minor.pad: 0
+ytick.major.pad: 2
+ytick.minor.pad: 2
 ytick.minor.visible: True
 ytick.right: True
 ytick.labelsize: 16
