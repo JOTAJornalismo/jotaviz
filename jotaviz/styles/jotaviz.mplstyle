@@ -63,38 +63,31 @@ axes.formatter.offset_threshold: 2
 ##***************************************************************************************************
 # set xAxis
 ##***************************************************************************************************
-xtick.major.size: 5 # major tick size in points
-xtick.minor.size: 0 # minor tick size in points
+xtick.major.size: 7 # major tick length in points
+xtick.minor.size: 0 # minor tick length in points
 xtick.major.width: 1.2  # major tick width in points
 xtick.minor.width: 1.0  # minor tick width in points
-xtick.major.length: 15  # major tick length in points
-xtick.minor.length: 5  # minor tick length in points
 xtick.major.pad: 5 # distance to major tick label in points
 xtick.minor.pad: 5 # distance to the minor tick label in points
 xtick.minor.visible: True 
 xtick.top: False
-xtick.major.labelsize: 16 # fontsize of the tick labels
-xtick.minor.labelsize: 12 # fontsize of the tick labels
-xtick.right.direction: in  # direction: in, out, or inout
+xtick.labelsize: 16 # fontsize of the tick labels
+xtick.direction: in  # direction: in, out, or inout
 xtick.color: 444444
 
 
 ##***************************************************************************************************
 # set yAxis
 ##***************************************************************************************************
-ytick.major.size: 5
-ytick.minor.size: 1.5
+ytick.major.size: 7
+ytick.minor.size: 2
 ytick.major.width: 1.2
-ytick.minor.width: 0.9
-ytick.major.length: 15
-ytick.minor.length: 5
-ytick.major.pad: 0
+ytick.minor.width: 1.0
+ytick.major.pad: 5
 ytick.minor.visible: True
 ytick.right: True
-ytick.major.labelsize: 16
-ytick.minor.labelsize: 12
-ytick.left.direction: out  # direction: in, out, or inout
-ytick.right.direction: inout  # direction: in, out, or inout
+ytick.labelsize: 16
+ytick.direction: inout  # direction: in, out, or inout
 ytick.color: 444444
 
 ##***************************************************************************************************
@@ -113,7 +106,7 @@ figure.subplot.wspace: 0.2
 # set marker properties
 ##***************************************************************************************************
 lines.marker: None 
-lines.markersize: 8
+lines.markersize: 10
 lines.markeredgewidth: 2
 lines.markerfacecolor: auto
 lines.markeredgecolor: auto
@@ -127,8 +120,8 @@ markers.fillstyle: full
 # set savefig
 ##***************************************************************************************************
 savefig.bbox: tight
-savefig.pad_inches: 0.05
-savefig.dpi: 500
+savefig.pad_inches: 0.08
+savefig.dpi: 600
 savefig.format: png
 savefig.facecolor: e8eaeb
 savefig.edgecolor: white
@@ -144,11 +137,11 @@ legend.numpoints : 1
 legend.scatterpoints: 1
 legend.title_fontsize: 10
 legend.labelspacing: 0.3
-legend.fontsize: small
+legend.fontsize: large
 legend.columnspacing: 1.0
 legend.borderaxespad: -0.5
 legend.handlelength: 0.7
-legend.handletextpad: 0.2
+legend.handletextpad: 0.3
 
 
 ##***************************************************************************************************
