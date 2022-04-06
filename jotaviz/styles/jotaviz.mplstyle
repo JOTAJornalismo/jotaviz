@@ -25,7 +25,7 @@ font.style: normal
 font.variant: normal
 font.weight: normal
 font.stretch: normal
-font.size: 16
+font.size: 14
 text.color: 222222
 mathtext.fontset: dejavuserif
 
@@ -40,7 +40,7 @@ axes.grid: True
 axes.labelweight: normal
 axes.labelsize: large
 axes.titlesize: x-large
-axes.facecolor: EBE8EA
+axes.facecolor: f0f0f0
 axes.edgecolor: f0f0f0
 axes.axisbelow: True 
 axes.autolimit_mode: round_numbers
@@ -66,7 +66,7 @@ xtick.minor.visible: True
 xtick.top: False
 xtick.labelsize: large # fontsize of the tick labels
 xtick.direction: in  # direction: in, out, or inout
-xtick.color: E4E4E4
+xtick.color: 444444
 
 
 ##***************************************************************************************************
@@ -82,7 +82,7 @@ ytick.minor.visible: True
 ytick.right: True
 ytick.labelsize: large
 ytick.direction: inout  # direction: in, out, or inout
-ytick.color: E4E4E4
+ytick.color: 444444
 
 ##***************************************************************************************************
 # set figure
@@ -104,9 +104,9 @@ figure.titleweight: bold
 ##***************************************************************************************************
 lines.marker: None 
 lines.markersize: 10
-lines.linewidth: 3
+lines.linewidth: 4
 lines.solid_capstyle: butt
-lines.markeredgewidth: 3
+lines.markeredgewidth: 6
 lines.markerfacecolor: auto
 lines.markeredgecolor: auto
 lines.antialiased: True
