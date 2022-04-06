@@ -13,9 +13,10 @@ errorbar.capsize: 0
 # scatter props
 scatter.marker: o
 
-patch.edgecolor: white
-patch.linewidth: 0.0
+patch.edgecolor: f0f0f0
+patch.linewidth: 0.5
 
+svg.fonttype: path
 ##***************************************************************************************************
 # set font
 ##***************************************************************************************************
@@ -27,15 +28,6 @@ font.stretch: normal
 font.size: 16
 text.color: 222222
 mathtext.fontset: dejavuserif
-figure.titlesize: 20
-figure.titleweight: bold
-
-##***************************************************************************************************
-# set facecolor
-##***************************************************************************************************
-figure.facecolor: EBE8EA
-figure.edgecolor: white
-
 
 ##***************************************************************************************************
 # set Axes
@@ -44,12 +36,12 @@ axes.linewidth: 2.0
 axes.labelpad : 5.0
 axes.xmargin: 0
 axes.ymargin: 0
+axes.grid: True
 axes.labelweight: normal
 axes.labelsize: large
-axes.titlesize: large
+axes.titlesize: x-large
 axes.facecolor: EBE8EA
-axes.edgecolor: 222222
-axes.labelcolor: 222222
+axes.edgecolor: f0f0f0
 axes.axisbelow: True 
 axes.autolimit_mode: round_numbers
 axes.unicode_minus: True
@@ -96,23 +88,27 @@ ytick.color: E4E4E4
 # set figure
 ##***************************************************************************************************
 figure.figsize: 9, 6
-figure.subplot.left: 0.130
-figure.subplot.right: 0.945
-figure.subplot.bottom: 0.1
-figure.subplot.top: 0.945
+figure.facecolor: f0f0f0
+figure.edgecolor: f0f0f0
+figure.subplot.left: 0.08
+figure.subplot.right: 0.95
+figure.subplot.bottom: 0.07
+figure.subplot.top: 0.95
 figure.subplot.hspace: 0.2
 figure.subplot.wspace: 0.2 
-
+figure.titlesize: 20
+figure.titleweight: bold
 								
 ##***************************************************************************************************
 # set marker properties
 ##***************************************************************************************************
 lines.marker: None 
 lines.markersize: 10
-lines.markeredgewidth: 2
+lines.linewidth: 3
+lines.solid_capstyle: butt
+lines.markeredgewidth: 3
 lines.markerfacecolor: auto
 lines.markeredgecolor: auto
-lines.solid_capstyle: butt
 lines.antialiased: True
 
 markers.fillstyle: full
@@ -125,8 +121,8 @@ savefig.bbox: tight
 savefig.pad_inches: 0.08
 savefig.dpi: 600
 savefig.format: png
-savefig.facecolor: EBE8EA
-savefig.edgecolor: white
+savefig.facecolor: f0f0f0
+savefig.edgecolor: f0f0f0
 
 ##***************************************************************************************************
 # set legend
@@ -149,11 +145,9 @@ legend.handletextpad: 0.3
 ##***************************************************************************************************
 # Set Grid lines
 ##***************************************************************************************************
-axes.grid: True
-grid.color: k
-grid.alpha: 0.4
-grid.linewidth: 0.3
-grid.linestyle: --
+grid.color: cbcbcb
+grid.linewidth: 1.0
+grid.linestyle: -
 
 ##***************************************************************************************************
 # Date
