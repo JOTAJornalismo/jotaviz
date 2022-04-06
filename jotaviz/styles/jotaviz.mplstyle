@@ -45,7 +45,7 @@ axes.ymargin: 0
 axes.grid: True
 axes.labelweight: normal
 axes.labelsize: medium
-axes.titleweight: normal 
+axes.titleweight: medium 
 axes.titlesize: x-large
 axes.facecolor: ebecf0
 axes.edgecolor: ebecf0
