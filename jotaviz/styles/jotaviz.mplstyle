@@ -110,13 +110,13 @@ figure.titleweight: bold
 # set marker properties
 ##***************************************************************************************************
 lines.marker: None 
-lines.markersize: 10
-lines.linewidth: 4
+lines.markersize: 4
+lines.linewidth: 3
 lines.solid_capstyle: butt
 lines.dashed_pattern: 6, 6
 lines.dashdot_pattern: 3, 5, 1, 5
 lines.dotted_pattern: 1, 3
-lines.markeredgewidth: 4
+lines.markeredgewidth: 3
 lines.markerfacecolor: auto
 lines.markeredgecolor: auto
 lines.antialiased: True
