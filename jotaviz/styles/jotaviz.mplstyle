@@ -30,7 +30,7 @@ font.style: normal
 font.variant: normal
 font.weight: normal
 font.stretch: normal
-font.size: 14.0
+font.size: 15.0
 text.color: 222222
 mathtext.fontset: cm
 
@@ -58,7 +58,7 @@ axes.spines.top: False
 axes.spines.bottom: False
 axes.formatter.use_locale: True
 axes.formatter.useoffset: False 
-axes.formatter.offset_threshold: 2.0
+axes.formatter.offset_threshold: 2
 
 ##***************************************************************************************************
 # Set Grid lines
@@ -123,7 +123,7 @@ lines.solid_capstyle: butt
 lines.dashed_pattern: 6.0, 6.0
 lines.dashdot_pattern: 3.0, 5.0, 1.0, 5.0
 lines.dotted_pattern: 1.0, 3.0
-lines.markeredgewidth: 1.0
+lines.markeredgewidth: 2.0
 lines.markerfacecolor: auto
 lines.markeredgecolor: auto
 lines.antialiased: True
@@ -147,8 +147,8 @@ legend.loc: best
 legend.frameon: True
 legend.fancybox: True
 legend.framealpha: 0.7
-legend.numpoints : 1.0
-legend.scatterpoints: 1.0
+legend.numpoints : 1
+legend.scatterpoints: 1
 legend.title_fontsize: large
 legend.fontsize: large
 legend.borderpad: 0.0   # border whitespace in fontsize units
