@@ -74,9 +74,10 @@ xtick.major.size: 10.0 # major tick length in points
 xtick.minor.size: 0.2 # minor tick length in points
 xtick.major.width: 1.5  # major tick width in points
 xtick.minor.width: 0.5  # minor tick width in points
-xtick.major.pad: 0 # distance to major tick label in points
-xtick.minor.pad: 0 # distance to the minor tick label in points
-xtick.minor.visible: True 
+xtick.major.pad: 5.0 # distance to major tick label in points
+xtick.minor.pad: 1.0 # distance to the minor tick label in points
+xtick.minor.visible: False 
+xtick.major.visible: False 
 xtick.top: False
 xtick.labelsize: large # fontsize of the tick labels
 xtick.direction: in  # direction: in, out, or inout
@@ -90,9 +91,10 @@ ytick.major.size: 8.0
 ytick.minor.size: 2.0
 ytick.major.width: 1.0
 ytick.minor.width: 0.5
-ytick.major.pad: 0.0
+ytick.major.pad: 2.0
 ytick.minor.pad: 0.0
-ytick.minor.visible: True
+ytick.minor.visible: False
+ytick.major.visible: False
 ytick.right: True
 ytick.labelsize: large
 ytick.direction: inout  # direction: in, out, or inout
