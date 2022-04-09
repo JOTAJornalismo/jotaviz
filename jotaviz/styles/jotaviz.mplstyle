@@ -93,7 +93,8 @@ ytick.minor.width: 0.5
 ytick.major.pad: 0.0
 ytick.minor.pad: 0.0
 ytick.minor.visible: False
-ytick.right: True
+ytick.right: False
+ytick.left: False
 ytick.labelsize: large
 ytick.direction: out  # direction: in, out, or inout
 ytick.color: 333333
