@@ -102,7 +102,7 @@ ytick.color: 333333
 ##***************************************************************************************************
 # set figure
 ##***************************************************************************************************
-figure.figsize: 9.0, 6.0
+figure.figsize: 8.75, 5.92
 figure.facecolor: ebecf0
 figure.edgecolor: ebecf0
 figure.subplot.left: 0.08
@@ -134,12 +134,14 @@ markers.fillstyle: full
 ##***************************************************************************************************
 # set savefig
 ##***************************************************************************************************
+# Always save as 'tight'
 savefig.bbox: tight
-savefig.pad_inches: 0.08
+savefig.pad_inches: 0.02 # Use virtually all space when we specify figure dimensions
 savefig.dpi: 600.0
 savefig.format: png
 savefig.facecolor: ebecf0
 savefig.edgecolor: ebecf0
+
 
 ##***************************************************************************************************
 # set legend
