@@ -111,7 +111,7 @@ You don't have to cite jotaviz if you use it but it's nice if you do:
     month     = {nov},
     year      = {2021},
     publisher = {},
-    version   = {1.0.0},
+    version   = {1.0.6},
     doi       = {},
     url       = {}
 }

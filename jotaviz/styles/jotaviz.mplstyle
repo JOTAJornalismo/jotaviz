@@ -30,7 +30,7 @@ font.style: normal
 font.variant: normal
 font.weight: normal
 font.stretch: normal
-font.size: 15.0
+font.size: 14.0
 text.color: 222222
 mathtext.fontset: cm
 mathtext.default: rm
@@ -46,8 +46,8 @@ axes.xmargin: 0.0 # change the x axis so there is no white space at the end
 axes.ymargin: 0.0 # change the y axis so there is no white space at the end
 axes.labelweight: normal
 axes.labelsize: medium
-axes.titleweight: medium 
-axes.titlesize: x-large
+axes.titleweight: bold 
+axes.titlesize: 18.0
 axes.facecolor: ebecf0
 axes.edgecolor: ebecf0
 axes.axisbelow: True 
@@ -79,7 +79,7 @@ xtick.major.pad: 5.0 # distance to major tick label in points
 xtick.minor.pad: 2.0 # distance to the minor tick label in points
 xtick.minor.visible: False 
 xtick.top: False
-xtick.labelsize: large # fontsize of the tick labels
+xtick.labelsize: 18.0 # fontsize of the tick labels
 xtick.direction: in  # direction: in, out, or inout
 xtick.color: 333333
 
@@ -96,7 +96,7 @@ ytick.minor.pad: 0.0
 ytick.minor.visible: False
 ytick.right: False
 ytick.left: False
-ytick.labelsize: large
+ytick.labelsize: 18.0
 ytick.direction: out  # direction: in, out, or inout
 ytick.color: 333333
 
@@ -112,7 +112,7 @@ figure.subplot.bottom: 0.07
 figure.subplot.top: 0.95
 figure.subplot.hspace: 0.2
 figure.subplot.wspace: 0.2 
-figure.titlesize: xx-large
+figure.titlesize: 32.0
 figure.titleweight: bold
 								
 ##***************************************************************************************************
