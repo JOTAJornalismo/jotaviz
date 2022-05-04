@@ -16,8 +16,6 @@ INSTALL_REQUIRES = ['matplotlib',
                     'atexit',
                     'pillow',
                     'numpy',
-                    'glob',
-                    'os',
                     ]
 
 # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers

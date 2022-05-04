@@ -1,0 +1,22 @@
+name: jotaviz
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - os
+  - pandas
+  - numpy
+  - wheel
+  - jupyter
+  - matplotlib
+  - setuptools
+  - scipy
+  - glob
+  - atexit
+  - shutil
+  - twine
+  - pillow
+  - pylint
+  - pip
+  - pip:
+      - jotaviz
