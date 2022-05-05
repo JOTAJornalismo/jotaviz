@@ -3,8 +3,6 @@
 Matplotlib JOTA style for making figures
 This repo has Matplotlib JOTA style to format plots and figures for publications and presentation.
 
-<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/exponential_decay.png" width=500>
-
 <img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/lula_bolsonaro_tendendcia_empresa.png" width=500>
 
 <img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/bolsonaro_lula_50.0-priors.png" width=500>
