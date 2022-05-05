@@ -13,7 +13,6 @@ dependencies:
   - scipy
   - glob
   - atexit
-  - shutil
   - twine
   - pillow
   - pylint
@@ -23,3 +22,4 @@ dependencies:
   - numpydoc
   - pip:
       - -e .
+      - highlight_text

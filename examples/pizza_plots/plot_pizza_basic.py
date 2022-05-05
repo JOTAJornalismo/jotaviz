@@ -4,9 +4,9 @@ Basic Pizza Plot (Percentiles)
 ==============================
 """
 from urllib.request import urlopen
-
 import matplotlib.pyplot as plt
 from PIL import Image
+import os
 
 from jotaviz import Pizza, add_image, FontManager
 
@@ -36,14 +36,14 @@ lewa_cropped = Image.open(urlopen(URL))
 
 # parameter list
 params = [
-    "Ataque", "Defesa", "Poderes\nmágicos", "Articulação", "Abertura",
-    "Experiência", "Golpes", "Progressive Carries",
-    "Successful Dribbles", "\nTouches\nper Turnover", "pAdj\nPress Regains", "Aerials Won"
+    "\nAtaque", "Defesa", "Poderes\nmágicos", "Articulação", "Abertura",
+    "Experiência", "Golpes", "Interlocução", "Projetos \naprovados", 
+    "Projetos\narquivados", "\nDerrotas\nem casa", "Redes\nsociais"
 ]
 
 # values for corresponding parameters
 # The values are taken from the excellent fbref website (supplied by StatsBomb)
-values = [99, 99, 87, 51, 62, 58, 45, 40, 27, 74, 77, 73]
+values = [90, 99, 87, 51, 62, 58, 45, 40, 27, 74, 77, 73]
 
 # instantiate Pizza class
 baker = Pizza(
@@ -80,35 +80,37 @@ fig, ax = baker.make_pizza(
 
 # add title
 fig.text(
-    0.515, 0.97, "Robert Lewandowski - FC Bayern Munich", size=18,
+    0.515, 0.949, "Arthur Lira (PP/AL)", size=28,
     ha="center", fontproperties=font_bold.prop, color="#000000"
 )
 
 # add subtitle
 fig.text(
-    0.515, 0.942,
-    "Percentile Rank vs Top-Five League Forwards | Season 2020-21",
-    size=15,
+    0.515, 0.920,
+    "Percentil no Ranking do Congresso | Temporada 2019-22",
+    size=16,
     ha="center", fontproperties=font_bold.prop, color="#000000"
 )
 
 # add credits
-CREDIT_1 = "data: statsbomb viz fbref"
-CREDIT_2 = "inspired by: @Worville, @FootballSlices, @somazerofc & @Soumyaj15209314"
+CREDIT_1 = "dados: Câmara dos Deputados"
+CREDIT_2 = "elaboração: @dmarcelinobr"
 
 fig.text(
-    0.99, 0.005, f"{CREDIT_1}\n{CREDIT_2}", size=9,
+    0.99, 0.005, f"{CREDIT_1}\n{CREDIT_2}", size=11,
     fontproperties=font_italic.prop, color="#000000",
     ha="right"
 )
 
-plt.show()
+# plt.show()
+
+plt.savefig("plot_pizza-01.png")
 
 ##############################################################################
 # Adding Image
 # ------------
 # One can add image to the pizza plot. The process is like this: first increase the size of the
-# center circle by using ``inner_circle_size`` argument inside ``PyPizza``
+# center circle by using ``inner_circle_size`` argument inside ``Pizza``
 # and then using ``add_image`` method to plot the image at the center.
 #
 # Hack: You can use `Image-Online.co <https://crop-circle.imageonline.co/>`_
@@ -150,24 +152,24 @@ fig, ax = baker.make_pizza(
 
 # add title
 fig.text(
-    0.515, 0.97, "Robert Lewandowski - FC Bayern Munich", size=18,
+    0.515, 0.949, "Arthur Lira (PP/AL)", size=28,
     ha="center", fontproperties=font_bold.prop, color="#000000"
 )
 
 # add subtitle
 fig.text(
-    0.515, 0.942,
-    "Percentile Rank vs Top-Five League Forwards | Season 2020-21",
-    size=15,
+    0.515, 0.920,
+    "Percentil no Ranking do Congresso | Temporada 2019-22",
+    size=16,
     ha="center", fontproperties=font_bold.prop, color="#000000"
 )
 
 # add credits
-CREDIT_1 = "data: statsbomb viz fbref"
-CREDIT_2 = "inspired by: @Worville, @FootballSlices, @somazerofc & @Soumyaj15209314"
+CREDIT_1 = "dados: Câmara dos Deputados"
+CREDIT_2 = "elaboração: @dmarcelinobr"
 
 fig.text(
-    0.99, 0.005, f"{CREDIT_1}\n{CREDIT_2}", size=9,
+    0.99, 0.005, f"{CREDIT_1}\n{CREDIT_2}", size=11,
     fontproperties=font_italic.prop, color="#000000",
     ha="right"
 )
@@ -177,7 +179,9 @@ ax_image = add_image(
     lewa_cropped, fig, left=0.4478, bottom=0.4315, width=0.13, height=0.127
 )   # these values might differ when you are plotting
 
-plt.show()
+# plt.show()
+
+plt.savefig("plot_pizza-02.png")
 
 ##############################################################################
 # Adding Colors To Blank Spaces
@@ -224,29 +228,31 @@ fig, ax = baker.make_pizza(
 
 # add title
 fig.text(
-    0.515, 0.97, "Robert Lewandowski - FC Bayern Munich", size=18,
+    0.515, 0.949, "Arthur Lira (PP/AL)", size=28,
     ha="center", fontproperties=font_bold.prop, color="#000000"
 )
 
 # add subtitle
 fig.text(
-    0.515, 0.942,
-    "Percentile Rank vs Top-Five League Forwards | Season 2020-21",
-    size=15,
+    0.515, 0.920,
+    "Percentil no Ranking do Congresso | Temporada 2019-22",
+    size=16,
     ha="center", fontproperties=font_bold.prop, color="#000000"
 )
 
 # add credits
-CREDIT_1 = "data: statsbomb viz fbref"
-CREDIT_2 = "inspired by: @Worville, @FootballSlices, @somazerofc & @Soumyaj15209314"
+CREDIT_1 = "dados: Câmara dos Deputados"
+CREDIT_2 = "elaboração: @dmarcelinobr"
 
 fig.text(
-    0.99, 0.005, f"{CREDIT_1}\n{CREDIT_2}", size=9,
+    0.99, 0.005, f"{CREDIT_1}\n{CREDIT_2}", size=11,
     fontproperties=font_italic.prop, color="#000000",
     ha="right"
 )
 
-plt.show()
+# plt.show()
+
+plt.savefig("plot_pizza-03.png")
 
 ##############################################################################
 # Adding Colors To Blank Spaces (2)
@@ -288,26 +294,28 @@ fig, ax = baker.make_pizza(
 
 # add title
 fig.text(
-    0.515, 0.97, "Robert Lewandowski - FC Bayern Munich", size=18,
+    0.515, 0.949, "Arthur Lira (PP/AL)", size=28,
     ha="center", fontproperties=font_bold.prop, color="#000000"
 )
 
 # add subtitle
 fig.text(
-    0.515, 0.942,
-    "Percentile Rank vs Top-Five League Forwards | Season 2020-21",
-    size=15,
+    0.515, 0.920,
+    "Percentil no Ranking do Congresso | Temporada 2019-22",
+    size=16,
     ha="center", fontproperties=font_bold.prop, color="#000000"
 )
 
 # add credits
-CREDIT_1 = "data: statsbomb viz fbref"
-CREDIT_2 = "inspired by: @Worville, @FootballSlices, @somazerofc & @Soumyaj15209314"
+CREDIT_1 = "dados: Câmara dos Deputados"
+CREDIT_2 = "elaboração: @dmarcelinobr"
 
 fig.text(
-    0.99, 0.005, f"{CREDIT_1}\n{CREDIT_2}", size=9,
+    0.99, 0.005, f"{CREDIT_1}\n{CREDIT_2}", size=11,
     fontproperties=font_italic.prop, color="#000000",
     ha="right"
 )
 
-plt.show()
+# plt.show()
+
+plt.savefig("plot_pizza-04.png")

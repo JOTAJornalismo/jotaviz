@@ -13,10 +13,10 @@ dependencies:
   - scipy
   - glob
   - atexit
-  - shutil
   - twine
   - pillow
   - pylint
   - pip
   - pip:
       - jotaviz
+      - highlight_text

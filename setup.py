@@ -12,10 +12,10 @@ with open('README.md') as readme_file:
 
 INSTALL_REQUIRES = ['matplotlib',
                     'pandas',
-                    'scipy',
-                    'atexit',
-                    'pillow',
                     'numpy',
+                    'scipy',
+                    'pillow',
+                    'highlight_text',
                     ]
 
 # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
