@@ -90,7 +90,48 @@ The ```extensys``` + ```dark_background``` style
 <img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/fig5.png" width=500>
 
 
-## Help and Contribution
+## Custom plots 
+<p /p>
+
+
+<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/plot_pizza-01.png" width=500>
+
+
+<p /p>
+
+
+<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/plot_pizza-02.png" width=500>
+
+
+<p /p>
+
+
+<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/plot_pizza-03.png" width=500>
+
+
+
+<p /p>
+
+
+<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/plot_pizza-05.png" width=500>
+
+
+
+<p /p>
+
+
+<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/plot_bumpy-01.png" width=500>
+
+
+
+<p /p>
+
+
+<img src="https://github.com/JOTAJornalismo/jotaviz/raw/main/examples/figures/plot_bumpy-04.png" width=500>
+
+
+
+## Help and contribution
 
 Please feel free to contribute to the jotaviz repo! Before starting a new style or making any changes, please create an issue through the [GitHub issue tracker](https://github.com/JOTAJornalismo/jotaviz/issues). 
 
