@@ -24,9 +24,9 @@ font_bold = FontManager(("https://github.com/JOTAJornalismo/jotaviz/blob/main/jo
 ##############################################################################
 # Load Image
 # ----------
-# Load a cropped image of Robert Lewandowski.
+# Load a cropped image of Arthur Lira:
 
-URL = "https://github.com/andrewRowlinson/mplsoccer-assets/blob/main/lewa_cropped.png?raw=true"
+URL = "https://github.com/JOTAJornalismo/jotaviz/blob/main/jotaviz/assets/arthur_lira.jpg?raw=true"
 lewa_cropped = Image.open(urlopen(URL))
 
 ##############################################################################
@@ -36,8 +36,8 @@ lewa_cropped = Image.open(urlopen(URL))
 
 # parameter list
 params = [
-    "Non-Penalty Goals", "npxG", "npxG per Shot", "xA", "Open Play\nShot Creating Actions",
-    "\nPenalty Area\nEntries", "Progressive Passes", "Progressive Carries",
+    "Ataque", "Defesa", "Poderes\nmágicos", "Articulação", "Abertura",
+    "Experiência", "Golpes", "Progressive Carries",
     "Successful Dribbles", "\nTouches\nper Turnover", "pAdj\nPress Regains", "Aerials Won"
 ]
 
@@ -189,7 +189,7 @@ plt.show()
 # ``color_blank_space`` then those colors will be used. The user can set the alpha
 # for blank-space using ``blank_alpha`` argument.
 
-# instantiate PyPizza class
+# instantiate Pizza class
 baker = Pizza(
     params=params,                  # list of parameters
     straight_line_color="#F2F2F2",  # color for straight lines
@@ -253,7 +253,7 @@ plt.show()
 # ---------------------------------
 # Here we will pass a list of color to fill the blank spaces.
 
-# instantiate PyPizza class
+# instantiate Pizza class
 baker = Pizza(
     params=params,                  # list of parameters
     straight_line_color="#F2F2F2",  # color for straight lines
