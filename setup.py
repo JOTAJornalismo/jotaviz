@@ -3,6 +3,7 @@
 
 from setuptools import setup
 
+import glob
 import jotaviz
 
 VERSION = jotaviz.__version__
@@ -26,6 +27,7 @@ CLASSIFIERS = ['Development Status :: 3 - Alpha',
 			   'Framework :: Matplotlib',
                'Programming Language :: Python :: 3 :: Only',
                'Topic :: Scientific/Engineering/Journalism :: Visualization']
+
 
 
 setup(name='jotaviz',

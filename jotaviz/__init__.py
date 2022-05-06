@@ -7,3 +7,4 @@ from jotaviz.pizza import *
 from jotaviz.bumpy import *
 from jotaviz.radar import *
 from jotaviz.quiver import *
+from jotaviz.styles import *
