@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """A Python module for plotting pizza-plots.
 
 Author: Daniel Marcelino(@dmarcelinobr)

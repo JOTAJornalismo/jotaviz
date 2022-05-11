@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """jotaviz - A collection of plotting functions and styles used at jota.info"""
 
 __version__ = "1.0.5"
@@ -7,4 +9,8 @@ from jotaviz.pizza import *
 from jotaviz.bumpy import *
 from jotaviz.radar import *
 from jotaviz.quiver import *
+from jotaviz.styles import *
+
+from jotaviz.dotify import *
+from jotaviz.api import *
 from jotaviz.styles import *

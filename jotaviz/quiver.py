@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """`jotaviz.quiver` is a python module containing a function to plot arrows in
 Matplotlib and a complementary handler for adding the arrows to the legend."""
 

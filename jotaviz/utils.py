@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """ Python module containing helper functions for jotaviz."""
 
 from tempfile import NamedTemporaryFile

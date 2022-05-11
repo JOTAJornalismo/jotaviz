@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """ A Python module for plotting radar-chart.
 
 Authors: Anmol_Durgapal(@slothfulwave612) and Andrew Rowlinson (@numberstorm)
