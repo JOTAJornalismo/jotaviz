@@ -50,11 +50,11 @@ jotagray = {
     'axes.edgecolor': '#ebecf0',
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
-    'axes.titlesize': 16.0,
+    'axes.titlesize': 18.0,
     'axes.titleweight': 'bold',
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
     'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
-    'axes.labelsize': 14.0,
+    'axes.labelsize': 16.0,
     'axes.labelweight': 'normal',
     'axes.axisbelow': True,
     'axes.autolimit_mode': 'round_numbers',
@@ -86,7 +86,7 @@ jotagray = {
     # Grid
     'grid.color': '#555555',
     'grid.linewidth': 1.0,
-    'grid.linestyle': '-',
+    'grid.linestyle': ':',
 
      # Ticks X
     'xtick.major.size': 10.0, # major tick length in points
@@ -119,20 +119,21 @@ jotagray = {
     'image.origin': 'upper',
 
     # Figure
-    'figure.figsize': [8.75, 5.92],
+    'figure.figsize': [7.29, 7.29],
     'figure.facecolor': '#ebecf0',
     'figure.edgecolor': '#ebecf0',
-    'figure.subplot.hspace': 0.2,
-    'figure.subplot.wspace': 0.2,
-    'figure.subplot.left': 0.08,
-    'figure.subplot.right': 0.95,
-    'figure.subplot.bottom': 0.07,
-    'figure.subplot.top': 0.95,
-    'figure.titlesize': 30.0,
+    'figure.subplot.hspace': 0.156,
+    'figure.subplot.wspace': 0.156,
+    'figure.subplot.left': 0.177,
+    'figure.subplot.right': 0.946,
+    'figure.subplot.bottom': 0.156,
+    'figure.subplot.top': 0.965,
+    'figure.titlesize': 32.0,
     'figure.titleweight': 'bold',
 
+
     # set savefig
-    'savefig.dpi': 300,
+    'savefig.dpi': 96,
     'savefig.bbox': 'tight',
     'savefig.pad_inches': 0.02, # Use virtually all space when we specify figure dimensions
     'savefig.format': 'png',
@@ -166,8 +167,6 @@ jotagray = {
     'date.autoformatter.month': '%b %Y',
     'date.autoformatter.day': '%b %d %Y',
     'date.autoformatter.hour': '%H:%M:%S',
-    'date.autoformatter.minute': '%H:%M:%S.%f',
-    'date.autoformatter.second': '%H:%M:%S.%',
 }
 
 
@@ -211,19 +210,17 @@ jotawhite = {
     'scatter.marker': 'o',
     'markers.fillstyle': 'full',
 
-    # AXES
     # Documentation for cycler (https://matplotlib.org/cycler/),
     # Axes
-    'axes.grid': True,
     'axes.facecolor': 'white',
     'axes.edgecolor': 'white',
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
-    'axes.titlesize': 16.0,
+    'axes.titlesize': 18.0,
     'axes.titleweight': 'bold',
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
     'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
-    'axes.labelsize': 14.0,
+    'axes.labelsize': 16.0,
     'axes.labelweight': 'normal',
     'axes.axisbelow': True,
     'axes.autolimit_mode': 'round_numbers',
@@ -235,7 +232,7 @@ jotawhite = {
     'axes.formatter.use_locale': True,
     'axes.formatter.useoffset': False,
     'axes.formatter.offset_threshold': 2,
-    'axes.axisbelow': 'line',
+
 
     'axes.prop_cycle': cycler(
         color=[
@@ -253,9 +250,11 @@ jotawhite = {
         ]
     ),
     # Grid
-    'grid.color': '#555555',
-    'grid.linewidth': 0.6,
-    'grid.linestyle': '-',
+    'axes.grid': True,
+    'grid.color': 'k',
+    'grid.alpha': 0.5,
+    'grid.linewidth': 0.4,
+    'grid.linestyle': ':',
 
      # Ticks X
     'xtick.major.size': 10.0, # major tick length in points
@@ -269,6 +268,7 @@ jotawhite = {
     'xtick.labelsize': 16.0, # fontsize of the tick labels
     'xtick.direction': 'in',  # direction: in, out, or inout
     'xtick.color': '#333333',
+
     # Ticks Y
     'ytick.major.size': 0.0,
     'ytick.minor.size': 0.0,
@@ -288,26 +288,26 @@ jotawhite = {
     'image.origin': 'upper',
 
     # Figure
-    'figure.figsize': [8.75, 5.92],
+    'figure.figsize': [7.29, 7.29],
     'figure.facecolor': 'white',
     'figure.edgecolor': 'white',
-    'figure.subplot.hspace': 0.2,
-    'figure.subplot.wspace': 0.2,
-    'figure.subplot.left': 0.08,
-    'figure.subplot.right': 0.95,
-    'figure.subplot.bottom': 0.07,
-    'figure.subplot.top': 0.95,
-    'figure.titlesize': 30.0,
+    'figure.subplot.hspace': 0.156,
+    'figure.subplot.wspace': 0.156,
+    'figure.subplot.left': 0.177,
+    'figure.subplot.right': 0.946,
+    'figure.subplot.bottom': 0.156,
+    'figure.subplot.top': 0.965,
+    'figure.titlesize': 32.0,
     'figure.titleweight': 'bold',
 
     # set savefig
-    'savefig.dpi': 300,
+    'savefig.dpi': 96,
     'savefig.bbox': 'tight',
     'savefig.pad_inches': 0.02, # Use virtually all space when we specify figure dimensions
     'savefig.format': 'png',
     'savefig.facecolor': 'white',
     'savefig.edgecolor': 'white',
-    'figure.constrained_layout.use': True,
+    'figure.constrained_layout.use': False,
     'svg.fonttype': 'path',
 
     # Legend
@@ -317,8 +317,8 @@ jotawhite = {
     'legend.framealpha': 0.7,
     'legend.numpoints': 1,
     'legend.scatterpoints': 1,
-    'legend.title_fontsize': 14.0,
-    'legend.fontsize': 11.0,
+    'legend.title_fontsize': 12.0,
+    'legend.fontsize': 'small',
     'legend.borderpad': 0.0,   # border whitespace in fontsize units
     'legend.markerscale': 1.0,  # the relative size of legend markers vs. original
     'legend.labelspacing': 0.3,  # the vertical space between the legend entries in fraction of fontsize
@@ -330,13 +330,17 @@ jotawhite = {
     'legend.facecolor': 'inherit',
     'legend.edgecolor': 'inherit',
 
+    'boxplot.boxprops.color': '#555555',
+    'boxplot.capprops.color': '#555555',
+    'boxplot.flierprops.color': '#555555',
+    'boxplot.flierprops.markeredgecolor': '#555555',
+    'boxplot.whiskerprops.color': '#555555',
+
      # Date
     'date.autoformatter.year': '%Y',
     'date.autoformatter.month': '%b %Y',
     'date.autoformatter.day': '%b %d %Y',
     'date.autoformatter.hour': '%H:%M:%S',
-    'date.autoformatter.minute': '%H:%M:%S.%f',
-    'date.autoformatter.second': '%H:%M:%S.%',
 }
 
 
