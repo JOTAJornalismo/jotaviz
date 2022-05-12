@@ -17,7 +17,6 @@ INSTALL_REQUIRES = ['matplotlib',
                     'numpy',
                     'scipy',
                     'pillow',
-                    'warnings',
                     'shutil',
                     'textwrap',
                     ]
