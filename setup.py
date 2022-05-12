@@ -28,7 +28,7 @@ CLASSIFIERS = ['Development Status :: 3 - Alpha',
                'Operating System :: OS Independent',
 			   'Framework :: Matplotlib',
                'Programming Language :: Python :: 3 :: Only',
-               'Topic :: Scientific/Engineering/Journalism :: Visualization']
+               'Topic :: Scientific/Engineering :: Visualization']
 
 
 #Set up the machinery to install custom fonts.
