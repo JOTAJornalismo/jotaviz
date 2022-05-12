@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from jotaviz import templates
 from jotaviz import cycles
 
+__all__ = ['Style']
 
 class Style:
     def __init__(self, style_name="default"):
