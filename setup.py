@@ -92,7 +92,7 @@ setup(
       packages=find_packages(where="src"),
       #Specify any non-python files to be distributed with the package
       package_data = {'' : ['fonts/*.ttf']},
-      python_requires='>=3.7',
+      python_requires='>=3.6',
       install_requires=INSTALL_REQUIRES,
       zip_safe=False,
       #Specify the custom install class
