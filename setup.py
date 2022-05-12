@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-from setuptools import setup
+from setuptools import setup, find_packages
 from setuptools.command.install import install
 import warnings
 import jotaviz
@@ -88,7 +88,8 @@ setup(
       author_email='daniel.marcelino@jota.info',
       author_twitter='@dmarcelinobr',
       license='MIT',
-      packages=["jotaviz", "jotaviz.styles"],
+      package_dir={"": "src"},
+      packages=find_packages(where="src"),
       #Specify any non-python files to be distributed with the package
       package_data = {'' : ['fonts/*.ttf']},
       python_requires='>=3.7',
