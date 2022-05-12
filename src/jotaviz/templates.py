@@ -15,7 +15,9 @@ jotagray = {
     'hatch.linewidth': 1.0,
 
     # Fonts
-    'font.family': 'roboto',
+    'font.family': ['sans-serif'],
+    'font.sans-serif': ['Roboto', 'Computer Modern Sans Serif', 'DejaVu Sans'],
+    'font.fantasy': ['xkcd'],  
     'font.style': 'normal',
     'font.variant': 'normal',
     'font.weight': 'normal',
@@ -45,7 +47,6 @@ jotagray = {
     # AXES
     # Documentation for cycler (https://matplotlib.org/cycler/),
     # Axes
-    'axes.grid': True,
     'axes.facecolor': '#ebecf0',
     'axes.edgecolor': '#ebecf0',
     'axes.linewidth': 4.0,
@@ -66,7 +67,6 @@ jotagray = {
     'axes.formatter.use_locale': True,
     'axes.formatter.useoffset': False,
     'axes.formatter.offset_threshold': 2,
-    'axes.axisbelow': 'line',
 
     'axes.prop_cycle': cycler(
         color=[
@@ -83,9 +83,11 @@ jotagray = {
             'k',
         ]
     ),
-    # Grid
-    'grid.color': '#555555',
-    'grid.linewidth': 1.0,
+     # Grid
+    'axes.grid': True,
+    'grid.color': 'k',
+    'grid.alpha': 0.5,
+    'grid.linewidth': 0.6,
     'grid.linestyle': ':',
 
      # Ticks X
@@ -119,7 +121,7 @@ jotagray = {
     'image.origin': 'upper',
 
     # Figure
-    'figure.figsize': [7.29, 7.29],
+    'figure.figsize': [8.5, 7.25],
     'figure.facecolor': '#ebecf0',
     'figure.edgecolor': '#ebecf0',
     'figure.subplot.hspace': 0.156,
@@ -133,14 +135,14 @@ jotagray = {
 
 
     # set savefig
-    'savefig.dpi': 96,
+    'savefig.dpi': 150.0,
     'savefig.bbox': 'tight',
-    'savefig.pad_inches': 0.02, # Use virtually all space when we specify figure dimensions
+    'savefig.pad_inches': 0.03, # Use virtually all space when we specify figure dimensions
     'savefig.format': 'png',
     'savefig.facecolor': '#ebecf0',
     'savefig.edgecolor': '#ebecf0',
     'figure.constrained_layout.use': True,
-    'svg.fonttype': 'path',
+    'svg.fonttype': 'none',
 
     # Legend
     'legend.loc': 'best',
@@ -149,8 +151,8 @@ jotagray = {
     'legend.framealpha': 0.7,
     'legend.numpoints': 1,
     'legend.scatterpoints': 1,
-    'legend.title_fontsize': 14.0,
-    'legend.fontsize': 11.0,
+    'legend.title_fontsize': 'small',
+    'legend.fontsize': 'small',
     'legend.borderpad': 0.0,   # border whitespace in fontsize units
     'legend.markerscale': 1.0,  # the relative size of legend markers vs. original
     'legend.labelspacing': 0.3,  # the vertical space between the legend entries in fraction of fontsize
@@ -183,11 +185,14 @@ jotawhite = {
     'hatch.linewidth': 1.0,
 
     # Fonts
-    'font.family': 'roboto',
+    'font.family': ['sans-serif'],
+    'font.sans-serif': ['Roboto', 'Computer Modern Sans Serif', 'DejaVu Sans'],
+    'font.fantasy': ['xkcd'],    
     'font.style': 'normal',
     'font.variant': 'normal',
     'font.weight': 'normal',
     'font.stretch': 'normal',
+    
     'font.size': 14.0,
     'text.color': '#222222',
     'mathtext.fontset': 'dejavuserif',
@@ -253,7 +258,7 @@ jotawhite = {
     'axes.grid': True,
     'grid.color': 'k',
     'grid.alpha': 0.5,
-    'grid.linewidth': 0.4,
+    'grid.linewidth': 0.6,
     'grid.linestyle': ':',
 
      # Ticks X
@@ -288,27 +293,27 @@ jotawhite = {
     'image.origin': 'upper',
 
     # Figure
-    'figure.figsize': [7.29, 7.29],
+    'figure.figsize': [8.5, 7.25],
     'figure.facecolor': 'white',
     'figure.edgecolor': 'white',
-    'figure.subplot.hspace': 0.156,
-    'figure.subplot.wspace': 0.156,
-    'figure.subplot.left': 0.177,
-    'figure.subplot.right': 0.946,
-    'figure.subplot.bottom': 0.156,
-    'figure.subplot.top': 0.965,
+    'figure.subplot.hspace': 0.2,
+    'figure.subplot.wspace': 0.2,
+    'figure.subplot.left': 0.125,
+    'figure.subplot.right': 0.90,
+    'figure.subplot.bottom': 0.11,
+    'figure.subplot.top': 0.88,
     'figure.titlesize': 32.0,
     'figure.titleweight': 'bold',
 
     # set savefig
-    'savefig.dpi': 96,
+    'savefig.dpi': 150.0,
     'savefig.bbox': 'tight',
-    'savefig.pad_inches': 0.02, # Use virtually all space when we specify figure dimensions
+    'savefig.pad_inches': 0.03, # Use virtually all space when we specify figure dimensions
     'savefig.format': 'png',
     'savefig.facecolor': 'white',
     'savefig.edgecolor': 'white',
     'figure.constrained_layout.use': False,
-    'svg.fonttype': 'path',
+    'svg.fonttype': 'none',
 
     # Legend
     'legend.loc': 'best',
@@ -317,7 +322,7 @@ jotawhite = {
     'legend.framealpha': 0.7,
     'legend.numpoints': 1,
     'legend.scatterpoints': 1,
-    'legend.title_fontsize': 12.0,
+    'legend.title_fontsize': 'small',
     'legend.fontsize': 'small',
     'legend.borderpad': 0.0,   # border whitespace in fontsize units
     'legend.markerscale': 1.0,  # the relative size of legend markers vs. original
