@@ -43,7 +43,7 @@ def add_image(image, fig, left, bottom, width=None, height=None, **kwargs):
     --------
     >>> import matplotlib.pyplot as plt
     >>> from PIL import Image
-    >>> from mplsoccer import add_image
+    >>> from jotaviz import add_image
     >>> from urllib.request import urlopen
     >>> fig, ax = plt.subplots()
     >>> image_url = 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Messi_vs_Nigeria_2018.jpg'
@@ -168,7 +168,7 @@ class FontManager:
 
     Examples
     --------
-    >>> from mplsoccer import FontManager
+    >>> from jotaviz import FontManager
     >>> import matplotlib.pyplot as plt
     >>> font_url = 'https://github.com/google/fonts/blob/main/ofl/abel/Abel-Regular.ttf?raw=true'
     >>> fm = FontManager(url=font_url)
