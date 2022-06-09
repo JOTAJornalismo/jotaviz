@@ -79,7 +79,7 @@ jotagray = {
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
     'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
     'axes.labelsize': 18.0,
-    'axes.labelweight': 'mormal',
+    'axes.labelweight': 'normal',
     'axes.labelcolor': '#222222',
     'axes.axisbelow': True,
     'axes.autolimit_mode': 'round_numbers',
@@ -577,8 +577,9 @@ jotaglass = {
     'savefig.bbox': 'tight',
     'savefig.pad_inches': 0.03, # Use virtually all space when we specify figure dimensions
     'savefig.format': 'png',
-    'savefig.facecolor': '#ebecf0',
-    'savefig.edgecolor': '#ebecf0',
+    'savefig.facecolor': 'none',
+    'savefig.edgecolor': 'none',
+    'savefig.transparent': True,
     'figure.constrained_layout.use': True,
     'svg.fonttype': 'none',
     'svg.fonttype': 'path',
@@ -621,8 +622,6 @@ jotaglass = {
 
 
 
-
-
 jotablack = {
     # animation props
     'agg.path.chunksize': 0,
@@ -645,7 +644,7 @@ jotablack = {
 
      # Patches
     'patch.linewidth': 0.0,
-    'patch.edgecolor': 'white',
+    'patch.edgecolor': 'black',
     'patch.antialiased': True,
     'patch.force_edgecolor': True,
     'hatch.linewidth': 1.0,
@@ -772,8 +771,8 @@ jotablack = {
 
     # Figure
     'figure.figsize': [11.72, 9.72],
-    'figure.facecolor': 'white',
-    'figure.edgecolor': 'white',
+    'figure.facecolor': 'black',
+    'figure.edgecolor': 'black',
     'figure.subplot.hspace': 0.2,
     'figure.subplot.wspace': 0.2,
     'figure.subplot.left': 0.125,
@@ -832,7 +831,7 @@ jotablack = {
 
 
 
-jotadark= {
+jotadark = {
     # animation props
     'agg.path.chunksize': 0,
     'animation.avconv_args': [],
@@ -854,7 +853,7 @@ jotadark= {
 
      # Patches
     'patch.linewidth': 0.0,
-    'patch.edgecolor': 'white',
+    'patch.edgecolor': '#212946',
     'patch.antialiased': True,
     'patch.force_edgecolor': True,
     'hatch.linewidth': 1.0,
@@ -871,12 +870,12 @@ jotadark= {
     'font.weight': 'normal',
     'font.stretch': 'normal',
     'font.size': 15.0,
-    'text.color': 0.9,
+    'text.color': '#f1f1f1',
     'mathtext.fontset': 'dejavuserif',
     'mathtext.default': 'rm',
  
     # Lines
-    'lines.color': 'white',
+    'lines.color': '#f1f1f1',
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
     'lines.marker': None, 
@@ -899,7 +898,7 @@ jotadark= {
     # Documentation for cycler (https://matplotlib.org/cycler/),
     # Axes
     'axes.facecolor': '#212946',
-    'axes.edgecolor': '#212946',
+    'axes.edgecolor': '#f1f1f1',
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
     'axes.titlesize': 26.0,
@@ -911,7 +910,7 @@ jotadark= {
     'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
     'axes.labelsize': 18.0,
     'axes.labelweight': 'normal',
-    'axes.labelcolor': 0.9,
+    'axes.labelcolor': '#f1f1f1',
     'axes.axisbelow': True,
     'axes.autolimit_mode': 'round_numbers',
     'axes.unicode_minus': True,
@@ -959,7 +958,7 @@ jotadark= {
     'xtick.top': False,
     'xtick.labelsize': 20.0, # fontsize of the tick labels
     'xtick.direction': 'in',  # direction: in, out, or inout
-    'xtick.color': 0.9,
+    'xtick.color': '#f1f1f1',
 
     # Ticks Y
     'ytick.alignment': 'center_baseline',
@@ -973,7 +972,7 @@ jotadark= {
     'ytick.right': False,
     'ytick.left': False,
     'ytick.labelsize': 20.0,
-    'ytick.color': 0.9,
+    'ytick.color': '#f1f1f1',
     'ytick.direction': 'out',  # direction: in, out, or inout
 
      # Images
