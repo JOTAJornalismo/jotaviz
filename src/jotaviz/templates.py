@@ -1,9 +1,25 @@
 # LATEX
 from cycler import cycler
 
-available =['jotagray', 'jotawhite', 'jotaglass', 'academic']
+available =['jotagray', 'jotawhite', 'jotaglass', 'jotadark', 'jotablack', 'academic']
 
 jotagray = {
+    # animation props
+    'agg.path.chunksize': 0,
+    'animation.avconv_args': [],
+    'animation.avconv_path': 'avconv',
+    'animation.bitrate': -1,
+    'animation.codec': 'h264',
+    'animation.convert_args': [],
+    'animation.convert_path': 'convert',
+    'animation.embed_limit': 20.0,
+    'animation.ffmpeg_args': [],
+    'animation.ffmpeg_path': 'ffmpeg',
+    'animation.frame_format': 'png',
+    'animation.html': 'none',
+    'animation.html_args': [],
+    'animation.writer': 'ffmpeg',
+
     # errorbar props
     'errorbar.capsize': 0.0,
 
@@ -16,13 +32,15 @@ jotagray = {
 
     # Fonts
     'font.family': ['sans-serif'],
-    'font.sans-serif': ['Roboto', 'Computer Modern Sans Serif', 'DejaVu Sans'],
-    'font.fantasy': ['xkcd'],  
+    'font.sans-serif': ['Roboto', 'Arial', 'DejaVu Sans'],
+    'font.fantasy': ['xkcd', 'Humor Sans', 'Comic Sans MS'],  
+    'font.monospace': ['DejaVu Sans Mono', 'Computer Modern Typewriter', 'Courier'],
+    'font.serif': ['DejaVu Serif', 'Computer Modern Roman'], 
     'font.style': 'normal',
     'font.variant': 'normal',
     'font.weight': 'normal',
     'font.stretch': 'normal',
-    'font.size': 18.0,
+    'font.size': 15.0,
     'text.color': '#222222',
     'mathtext.fontset': 'dejavuserif',
     'mathtext.default': 'rm',
@@ -42,21 +60,27 @@ jotagray = {
 
     # scatter props
     'scatter.marker': 'o',
-    'markers.fillstyle': 'full',
+    'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
+
+     # hist props
+     'hist.bins': 50,
 
     # AXES
     # Documentation for cycler (https://matplotlib.org/cycler/),
-    # Axes
     'axes.facecolor': '#ebecf0',
     'axes.edgecolor': '#ebecf0',
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
-    'axes.titlesize': 22.0,
+    'axes.titlesize': 26.0,
+    'axes.titlepad': 20,
     'axes.titleweight': 'bold',
+    'axes.titlelocation': 'left',
+    'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
     'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
-    'axes.labelsize': 22.0,
-    'axes.labelweight': 'normal',
+    'axes.labelsize': 18.0,
+    'axes.labelweight': 'mormal',
+    'axes.labelcolor': '#222222',
     'axes.axisbelow': True,
     'axes.autolimit_mode': 'round_numbers',
     'axes.unicode_minus': True,
@@ -89,39 +113,43 @@ jotagray = {
     'grid.alpha': 0.5,
     'grid.linewidth': 0.9,
     'grid.linestyle': ':',
-
+    
      # Ticks X
+    'xtick.alignment': 'center',
     'xtick.major.size': 10.0, # major tick length in points
     'xtick.minor.size': 0.2, # minor tick length in points
     'xtick.major.width': 1.5,  # major tick width in points
     'xtick.minor.width': 0.5,  # minor tick width in points
-    'xtick.major.pad': 5.0, # distance to major tick label in points
-    'xtick.minor.pad': 2.0, # distance to the minor tick label in points
+    'xtick.major.pad': 6.0, # distance to major tick label in points
+    'xtick.minor.pad': 3.0, # distance to the minor tick label in points
     'xtick.minor.visible': False, 
     'xtick.top': False,
-    'xtick.labelsize': 22.0, # fontsize of the tick labels
+    'xtick.labelsize': 20.0, # fontsize of the tick labels
     'xtick.direction': 'in',  # direction: in, out, or inout
     'xtick.color': '#333333',
+
     # Ticks Y
+    'ytick.alignment': 'center_baseline',
     'ytick.major.size': 0.0,
     'ytick.minor.size': 0.0,
     'ytick.major.width': 1.0,
     'ytick.minor.width': 0.5,
-    'ytick.major.pad': 0.2,
-    'ytick.minor.pad': 0.1,
+    'ytick.major.pad': 3.0,
+    'ytick.minor.pad': 1.5,
     'ytick.minor.visible': False,
     'ytick.right': False,
     'ytick.left': False,
-    'ytick.labelsize': 22.0,
+    'ytick.labelsize': 20.0,
     'ytick.color': '#333333',
     'ytick.direction': 'out',  # direction: in, out, or inout
 
     # Images
+    'image.aspect': 'equal',
     'image.cmap': 'gist_heat',
     'image.origin': 'upper',
 
     # Figure
-    'figure.figsize': [9.69, 9.69],
+    'figure.figsize': [11.72, 9.72],
     'figure.facecolor': '#ebecf0',
     'figure.edgecolor': '#ebecf0',
     'figure.subplot.hspace': 0.156,
@@ -130,7 +158,7 @@ jotagray = {
     'figure.subplot.right': 0.946,
     'figure.subplot.bottom': 0.156,
     'figure.subplot.top': 0.965,
-    'figure.titlesize': 44.0,
+    'figure.titlesize': 28.0,
     'figure.titleweight': 'bold',
 
 
@@ -143,6 +171,9 @@ jotagray = {
     'savefig.edgecolor': '#ebecf0',
     'figure.constrained_layout.use': True,
     'svg.fonttype': 'none',
+    'svg.fonttype': 'path',
+    'svg.hashsalt': None,
+    'svg.image_inline': True,
 
     # Legend
     'legend.loc': 'best',
@@ -153,7 +184,7 @@ jotagray = {
     'legend.scatterpoints': 1,
     'legend.title_fontsize': 'medium',
     'legend.fontsize': 'medium',
-    'legend.borderpad': 0.0,   # border whitespace in fontsize units
+    'legend.borderpad': 0.5,   # border whitespace in fontsize units
     'legend.markerscale': 1.0,  # the relative size of legend markers vs. original
     'legend.labelspacing': 0.3,  # the vertical space between the legend entries in fraction of fontsize
     'legend.columnspacing': 0.5, # the border between the axes and legend edge in fraction of fontsize
@@ -166,7 +197,7 @@ jotagray = {
 
      # Date
     'date.autoformatter.year': '%Y',
-    'date.autoformatter.month': '%b %Y',
+    'date.autoformatter.month': "%b'%y",
     'date.autoformatter.day': '%b %d %Y',
     'date.autoformatter.hour': '%H:%M:%S',
 }
@@ -174,6 +205,22 @@ jotagray = {
 
 
 jotawhite = {
+    # animation props
+    'agg.path.chunksize': 0,
+    'animation.avconv_args': [],
+    'animation.avconv_path': 'avconv',
+    'animation.bitrate': -1,
+    'animation.codec': 'h264',
+    'animation.convert_args': [],
+    'animation.convert_path': 'convert',
+    'animation.embed_limit': 20.0,
+    'animation.ffmpeg_args': [],
+    'animation.ffmpeg_path': 'ffmpeg',
+    'animation.frame_format': 'png',
+    'animation.html': 'none',
+    'animation.html_args': [],
+    'animation.writer': 'ffmpeg',
+
     # errorbar props
     'errorbar.capsize': 0.0,
 
@@ -184,16 +231,17 @@ jotawhite = {
     'patch.force_edgecolor': True,
     'hatch.linewidth': 1.0,
 
-    # Fonts
+     # Fonts
     'font.family': ['sans-serif'],
-    'font.sans-serif': ['Roboto', 'Computer Modern Sans Serif', 'DejaVu Sans'],
-    'font.fantasy': ['xkcd'],    
+    'font.sans-serif': ['Roboto', 'Arial', 'DejaVu Sans'],
+    'font.fantasy': ['xkcd', 'Humor Sans', 'Comic Sans MS'],  
+    'font.monospace': ['DejaVu Sans Mono', 'Computer Modern Typewriter', 'Courier'],
+    'font.serif': ['DejaVu Serif', 'Computer Modern Roman'], 
     'font.style': 'normal',
     'font.variant': 'normal',
     'font.weight': 'normal',
     'font.stretch': 'normal',
-    
-    'font.size': 18.0,
+    'font.size': 15.0,
     'text.color': '#222222',
     'mathtext.fontset': 'dejavuserif',
     'mathtext.default': 'rm',
@@ -213,7 +261,10 @@ jotawhite = {
 
     # scatter props
     'scatter.marker': 'o',
-    'markers.fillstyle': 'full',
+    'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
+
+     # hist props
+     'hist.bins': 50,
 
     # Documentation for cycler (https://matplotlib.org/cycler/),
     # Axes
@@ -221,12 +272,16 @@ jotawhite = {
     'axes.edgecolor': 'white',
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
-    'axes.titlesize': 22.0,
+    'axes.titlesize': 26.0,
+    'axes.titlepad': 20,
     'axes.titleweight': 'bold',
+    'axes.titlelocation': 'left',
+    'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
     'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
-    'axes.labelsize': 22.0,
+    'axes.labelsize': 18.0,
     'axes.labelweight': 'normal',
+    'axes.labelcolor': '#222222',
     'axes.axisbelow': True,
     'axes.autolimit_mode': 'round_numbers',
     'axes.unicode_minus': True,
@@ -262,38 +317,41 @@ jotawhite = {
     'grid.linestyle': ':',
 
      # Ticks X
+    'xtick.alignment': 'center',
     'xtick.major.size': 10.0, # major tick length in points
     'xtick.minor.size': 0.2, # minor tick length in points
     'xtick.major.width': 1.5,  # major tick width in points
     'xtick.minor.width': 0.5,  # minor tick width in points
-    'xtick.major.pad': 5.0, # distance to major tick label in points
-    'xtick.minor.pad': 2.0, # distance to the minor tick label in points
+    'xtick.major.pad': 6.0, # distance to major tick label in points
+    'xtick.minor.pad': 3.0, # distance to the minor tick label in points
     'xtick.minor.visible': False, 
     'xtick.top': False,
-    'xtick.labelsize': 22.0, # fontsize of the tick labels
+    'xtick.labelsize': 20.0, # fontsize of the tick labels
     'xtick.direction': 'in',  # direction: in, out, or inout
     'xtick.color': '#333333',
 
     # Ticks Y
+    'ytick.alignment': 'center_baseline',
     'ytick.major.size': 0.0,
     'ytick.minor.size': 0.0,
     'ytick.major.width': 1.0,
     'ytick.minor.width': 0.5,
-    'ytick.major.pad': 0.2,
-    'ytick.minor.pad': 0.2,
+    'ytick.major.pad': 3.0,
+    'ytick.minor.pad': 1.5,
     'ytick.minor.visible': False,
     'ytick.right': False,
     'ytick.left': False,
-    'ytick.labelsize': 22.0,
+    'ytick.labelsize': 20.0,
     'ytick.color': '#333333',
     'ytick.direction': 'out',  # direction: in, out, or inout
 
     # Images
+    'image.aspect': 'equal',
     'image.cmap': 'gist_heat',
     'image.origin': 'upper',
 
     # Figure
-    'figure.figsize': [9.69, 9.69],
+    'figure.figsize': [11.72, 9.72],
     'figure.facecolor': 'white',
     'figure.edgecolor': 'white',
     'figure.subplot.hspace': 0.2,
@@ -302,7 +360,7 @@ jotawhite = {
     'figure.subplot.right': 0.90,
     'figure.subplot.bottom': 0.11,
     'figure.subplot.top': 0.88,
-    'figure.titlesize': 44.0,
+    'figure.titlesize': 28.0,
     'figure.titleweight': 'bold',
 
     # set savefig
@@ -314,6 +372,9 @@ jotawhite = {
     'savefig.edgecolor': 'white',
     'figure.constrained_layout.use': True,
     'svg.fonttype': 'none',
+    'svg.fonttype': 'path',
+    'svg.hashsalt': None,
+    'svg.image_inline': True,
 
     # Legend
     'legend.loc': 'best',
@@ -324,7 +385,7 @@ jotawhite = {
     'legend.scatterpoints': 1,
     'legend.title_fontsize': 'medium',
     'legend.fontsize': 'medium',
-    'legend.borderpad': 0.0,   # border whitespace in fontsize units
+    'legend.borderpad': 0.5,   # border whitespace in fontsize units
     'legend.markerscale': 1.0,  # the relative size of legend markers vs. original
     'legend.labelspacing': 0.3,  # the vertical space between the legend entries in fraction of fontsize
     'legend.columnspacing': 0.5, # the border between the axes and legend edge in fraction of fontsize
@@ -343,7 +404,7 @@ jotawhite = {
 
      # Date
     'date.autoformatter.year': "%Y",
-    'date.autoformatter.month': "%b %Y",
+    'date.autoformatter.month': "%b'%Y",
     'date.autoformatter.day': "%b %d %Y",
     'date.autoformatter.hour': "%H:%M:%S",
 }
@@ -353,6 +414,22 @@ jotawhite = {
 
 
 jotaglass = {
+    # animation props
+    'agg.path.chunksize': 0,
+    'animation.avconv_args': [],
+    'animation.avconv_path': 'avconv',
+    'animation.bitrate': -1,
+    'animation.codec': 'h264',
+    'animation.convert_args': [],
+    'animation.convert_path': 'convert',
+    'animation.embed_limit': 20.0,
+    'animation.ffmpeg_args': [],
+    'animation.ffmpeg_path': 'ffmpeg',
+    'animation.frame_format': 'png',
+    'animation.html': 'none',
+    'animation.html_args': [],
+    'animation.writer': 'ffmpeg',
+
     # errorbar props
     'errorbar.capsize': 0.0,
 
@@ -363,20 +440,21 @@ jotaglass = {
     'patch.force_edgecolor': True,
     'hatch.linewidth': 1.0,
 
-    # Fonts
+     # Fonts
     'font.family': ['sans-serif'],
-    'font.sans-serif': ['Roboto', 'Computer Modern Sans Serif', 'DejaVu Sans'],
-    'font.fantasy': ['xkcd'],    
+    'font.sans-serif': ['Roboto', 'Arial', 'DejaVu Sans'],
+    'font.fantasy': ['xkcd', 'Humor Sans', 'Comic Sans MS'],  
+    'font.monospace': ['DejaVu Sans Mono', 'Computer Modern Typewriter', 'Courier'],
+    'font.serif': ['DejaVu Serif', 'Computer Modern Roman'], 
     'font.style': 'normal',
     'font.variant': 'normal',
     'font.weight': 'normal',
     'font.stretch': 'normal',
-    
-    'font.size': 18.0,
+    'font.size': 15.0,
     'text.color': '#222222',
     'mathtext.fontset': 'dejavuserif',
     'mathtext.default': 'rm',
-
+ 
     # Lines
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
@@ -392,7 +470,10 @@ jotaglass = {
 
     # scatter props
     'scatter.marker': 'o',
-    'markers.fillstyle': 'full',
+    'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
+
+     # hist props
+     'hist.bins': 50,
 
     # Documentation for cycler (https://matplotlib.org/cycler/),
     # Axes
@@ -400,12 +481,16 @@ jotaglass = {
     'axes.edgecolor': 'white',
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
-    'axes.titlesize': 24.0,
+    'axes.titlesize': 26.0,
+    'axes.titlepad': 20,
     'axes.titleweight': 'bold',
+    'axes.titlelocation': 'left',
+    'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
     'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
-    'axes.labelsize': 24.0,
+    'axes.labelsize': 18.0,
     'axes.labelweight': 'normal',
+    'axes.labelcolor': '#222222',
     'axes.axisbelow': True,
     'axes.autolimit_mode': 'round_numbers',
     'axes.unicode_minus': True,
@@ -441,38 +526,41 @@ jotaglass = {
     'grid.linestyle': ':',
 
      # Ticks X
+    'xtick.alignment': 'center',
     'xtick.major.size': 10.0, # major tick length in points
     'xtick.minor.size': 0.2, # minor tick length in points
     'xtick.major.width': 1.5,  # major tick width in points
     'xtick.minor.width': 0.5,  # minor tick width in points
-    'xtick.major.pad': 5.0, # distance to major tick label in points
-    'xtick.minor.pad': 2.0, # distance to the minor tick label in points
+    'xtick.major.pad': 6.0, # distance to major tick label in points
+    'xtick.minor.pad': 3.0, # distance to the minor tick label in points
     'xtick.minor.visible': False, 
     'xtick.top': False,
-    'xtick.labelsize': 24.0, # fontsize of the tick labels
+    'xtick.labelsize': 20.0, # fontsize of the tick labels
     'xtick.direction': 'in',  # direction: in, out, or inout
     'xtick.color': '#333333',
 
     # Ticks Y
+    'ytick.alignment': 'center_baseline',
     'ytick.major.size': 0.0,
     'ytick.minor.size': 0.0,
     'ytick.major.width': 1.0,
     'ytick.minor.width': 0.5,
-    'ytick.major.pad': 0.2,
-    'ytick.minor.pad': 0.1,
+    'ytick.major.pad': 3.0,
+    'ytick.minor.pad': 1.5,
     'ytick.minor.visible': False,
     'ytick.right': False,
     'ytick.left': False,
-    'ytick.labelsize': 24.0,
+    'ytick.labelsize': 20.0,
     'ytick.color': '#333333',
     'ytick.direction': 'out',  # direction: in, out, or inout
 
-    # Images
+     # Images
+    'image.aspect': 'equal',
     'image.cmap': 'gist_heat',
     'image.origin': 'upper',
 
     # Figure
-    'figure.figsize': [9.69, 9.69],
+    'figure.figsize': [11.72, 9.72],
     'figure.facecolor': 'white',
     'figure.edgecolor': 'white',
     'figure.subplot.hspace': 0.2,
@@ -481,19 +569,21 @@ jotaglass = {
     'figure.subplot.right': 0.90,
     'figure.subplot.bottom': 0.11,
     'figure.subplot.top': 0.88,
-    'figure.titlesize': 42.0,
+    'figure.titlesize': 28.0,
     'figure.titleweight': 'bold',
 
     # set savefig
     'savefig.dpi': 100.0,
     'savefig.bbox': 'tight',
-    'savefig.pad_inches': 0.03,
+    'savefig.pad_inches': 0.03, # Use virtually all space when we specify figure dimensions
     'savefig.format': 'png',
-    'savefig.facecolor': 'none',
-    'savefig.edgecolor': 'none',
-    'savefig.transparent': True,
+    'savefig.facecolor': '#ebecf0',
+    'savefig.edgecolor': '#ebecf0',
     'figure.constrained_layout.use': True,
     'svg.fonttype': 'none',
+    'svg.fonttype': 'path',
+    'svg.hashsalt': None,
+    'svg.image_inline': True,
 
     # Legend
     'legend.loc': 'best',
@@ -504,7 +594,7 @@ jotaglass = {
     'legend.scatterpoints': 1,
     'legend.title_fontsize': 'medium',
     'legend.fontsize': 'medium',
-    'legend.borderpad': 0.0,  
+    'legend.borderpad': 0.5,  
     'legend.markerscale': 1.0,  
     'legend.labelspacing': 0.3, 
     'legend.columnspacing': 0.5, 
@@ -528,6 +618,428 @@ jotaglass = {
     'date.autoformatter.hour': "%H:%M:%S",
 }
 
+
+
+
+
+
+jotablack = {
+    # animation props
+    'agg.path.chunksize': 0,
+    'animation.avconv_args': [],
+    'animation.avconv_path': 'avconv',
+    'animation.bitrate': -1,
+    'animation.codec': 'h264',
+    'animation.convert_args': [],
+    'animation.convert_path': 'convert',
+    'animation.embed_limit': 20.0,
+    'animation.ffmpeg_args': [],
+    'animation.ffmpeg_path': 'ffmpeg',
+    'animation.frame_format': 'png',
+    'animation.html': 'none',
+    'animation.html_args': [],
+    'animation.writer': 'ffmpeg',
+
+    # errorbar props
+    'errorbar.capsize': 0.0,
+
+     # Patches
+    'patch.linewidth': 0.0,
+    'patch.edgecolor': 'white',
+    'patch.antialiased': True,
+    'patch.force_edgecolor': True,
+    'hatch.linewidth': 1.0,
+
+     # Fonts
+    'font.family': ['sans-serif'],
+    'font.sans-serif': ['Roboto', 'Arial', 'DejaVu Sans'],
+    'font.fantasy': ['xkcd', 'Humor Sans', 'Comic Sans MS'],  
+    'font.monospace': ['DejaVu Sans Mono', 'Computer Modern Typewriter', 'Courier'],
+    'font.serif': ['DejaVu Serif', 'Computer Modern Roman'], 
+    'font.style': 'normal',
+    'font.variant': 'normal',
+    'font.weight': 'normal',
+    'font.stretch': 'normal',
+    'font.size': 15.0,
+    'text.color': 'white',
+    'mathtext.fontset': 'dejavuserif',
+    'mathtext.default': 'rm',
+ 
+    # Lines
+    'lines.color': 'white',
+    'lines.linewidth': 2.0,
+    'lines.antialiased': True,
+    'lines.marker': None, 
+    'lines.markersize': 10.0,
+    'lines.solid_capstyle': 'butt',
+    'lines.dashed_pattern': [6.0, 6.0],
+    'lines.dashdot_pattern': [3.0, 5.0, 1.0, 5.0],
+    'lines.dotted_pattern': [1.0, 3.0],
+    'lines.markeredgewidth': 0.8,
+    'lines.markerfacecolor': 'none',
+    'lines.markeredgecolor': 'auto',
+
+    # scatter props
+    'scatter.marker': 'o',
+    'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
+
+     # hist props
+     'hist.bins': 50,
+
+    # Documentation for cycler (https://matplotlib.org/cycler/),
+    # Axes
+    'axes.facecolor': 'black',
+    'axes.edgecolor': 'white',
+    'axes.linewidth': 4.0,
+    'axes.labelpad': 5.0,
+    'axes.titlesize': 26.0,
+    'axes.titlepad': 20,
+    'axes.titleweight': 'bold',
+    'axes.titlelocation': 'left',
+    'axes3d.grid': True,
+    'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
+    'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
+    'axes.labelsize': 18.0,
+    'axes.labelweight': 'normal',
+    'axes.labelcolor': 'white',
+    'axes.axisbelow': True,
+    'axes.autolimit_mode': 'round_numbers',
+    'axes.unicode_minus': True,
+    'axes.spines.left': False,
+    'axes.spines.right': False,
+    'axes.spines.top': False,
+    'axes.spines.bottom': False,
+    'axes.formatter.use_locale': True,
+    'axes.formatter.useoffset': False,
+    'axes.formatter.offset_threshold': 2,
+
+
+    'axes.prop_cycle': cycler(
+        color=[
+            'tab:red',
+            'tab:blue',
+            'tab:green',
+            'tab:orange',
+            'tab:purple',
+            'tab:brown',
+            'tab:pink',
+            'tab:gray',
+            'tab:olive',
+            'tab:cyan',
+            'k',
+        ]
+    ),
+    # Grid
+    'axes.grid': True,
+    'grid.color': 'white',
+    'grid.alpha': 0.5,
+    'grid.linewidth': 0.7,
+    'grid.linestyle': ':',
+
+     # Ticks X
+    'xtick.alignment': 'center',
+    'xtick.major.size': 10.0, # major tick length in points
+    'xtick.minor.size': 0.2, # minor tick length in points
+    'xtick.major.width': 1.5,  # major tick width in points
+    'xtick.minor.width': 0.5,  # minor tick width in points
+    'xtick.major.pad': 6.0, # distance to major tick label in points
+    'xtick.minor.pad': 3.0, # distance to the minor tick label in points
+    'xtick.minor.visible': False, 
+    'xtick.top': False,
+    'xtick.labelsize': 20.0, # fontsize of the tick labels
+    'xtick.direction': 'in',  # direction: in, out, or inout
+    'xtick.color': 'white',
+
+    # Ticks Y
+    'ytick.alignment': 'center_baseline',
+    'ytick.major.size': 0.0,
+    'ytick.minor.size': 0.0,
+    'ytick.major.width': 1.0,
+    'ytick.minor.width': 0.5,
+    'ytick.major.pad': 3.0,
+    'ytick.minor.pad': 1.5,
+    'ytick.minor.visible': False,
+    'ytick.right': False,
+    'ytick.left': False,
+    'ytick.labelsize': 20.0,
+    'ytick.color': 'white',
+    'ytick.direction': 'out',  # direction: in, out, or inout
+
+     # Images
+    'image.aspect': 'equal',
+    'image.cmap': 'gist_heat',
+    'image.origin': 'upper',
+
+    # Figure
+    'figure.figsize': [11.72, 9.72],
+    'figure.facecolor': 'white',
+    'figure.edgecolor': 'white',
+    'figure.subplot.hspace': 0.2,
+    'figure.subplot.wspace': 0.2,
+    'figure.subplot.left': 0.125,
+    'figure.subplot.right': 0.90,
+    'figure.subplot.bottom': 0.11,
+    'figure.subplot.top': 0.88,
+    'figure.titlesize': 28.0,
+    'figure.titleweight': 'bold',
+
+    # set savefig
+    'savefig.dpi': 100.0,
+    'savefig.bbox': 'tight',
+    'savefig.pad_inches': 0.03, # Use virtually all space when we specify figure dimensions
+    'savefig.format': 'png',
+    'savefig.facecolor': 'black',
+    'savefig.edgecolor': 'black',
+    'figure.constrained_layout.use': True,
+    'svg.fonttype': 'none',
+    'svg.fonttype': 'path',
+    'svg.hashsalt': None,
+    'svg.image_inline': True,
+
+    # Legend
+    'legend.loc': 'best',
+    'legend.fancybox': True,
+    'legend.frameon': True,
+    'legend.framealpha': 0.7,
+    'legend.numpoints': 1,
+    'legend.scatterpoints': 1,
+    'legend.title_fontsize': 'medium',
+    'legend.fontsize': 'medium',
+    'legend.borderpad': 0.5,  
+    'legend.markerscale': 1.0,  
+    'legend.labelspacing': 0.3, 
+    'legend.columnspacing': 0.5, 
+    'legend.borderaxespad': 0.5,
+    'legend.handlelength': 0.5, 
+    'legend.handleheight': 0.5, 
+    'legend.handletextpad': 0.5,
+    'legend.facecolor': 'inherit',
+    'legend.edgecolor': 'inherit',
+
+    'boxplot.boxprops.color': 'white',
+    'boxplot.capprops.color': 'white',
+    'boxplot.flierprops.color': 'white',
+    'boxplot.flierprops.markeredgecolor': 'white',
+    'boxplot.whiskerprops.color': 'white',
+
+     # Date
+    'date.autoformatter.year': "%Y",
+    'date.autoformatter.month': "%b'%y",
+    'date.autoformatter.day': "%b %d %Y",
+    'date.autoformatter.hour': "%H:%M:%S",
+}
+
+
+
+
+jotadark= {
+    # animation props
+    'agg.path.chunksize': 0,
+    'animation.avconv_args': [],
+    'animation.avconv_path': 'avconv',
+    'animation.bitrate': -1,
+    'animation.codec': 'h264',
+    'animation.convert_args': [],
+    'animation.convert_path': 'convert',
+    'animation.embed_limit': 20.0,
+    'animation.ffmpeg_args': [],
+    'animation.ffmpeg_path': 'ffmpeg',
+    'animation.frame_format': 'png',
+    'animation.html': 'none',
+    'animation.html_args': [],
+    'animation.writer': 'ffmpeg',
+
+    # errorbar props
+    'errorbar.capsize': 0.0,
+
+     # Patches
+    'patch.linewidth': 0.0,
+    'patch.edgecolor': 'white',
+    'patch.antialiased': True,
+    'patch.force_edgecolor': True,
+    'hatch.linewidth': 1.0,
+
+     # Fonts
+     # font color: very light grey
+    'font.family': ['sans-serif'],
+    'font.sans-serif': ['Roboto', 'Arial', 'DejaVu Sans'],
+    'font.fantasy': ['xkcd', 'Humor Sans', 'Comic Sans MS'],  
+    'font.monospace': ['DejaVu Sans Mono', 'Computer Modern Typewriter', 'Courier'],
+    'font.serif': ['DejaVu Serif', 'Computer Modern Roman'], 
+    'font.style': 'normal',
+    'font.variant': 'normal',
+    'font.weight': 'normal',
+    'font.stretch': 'normal',
+    'font.size': 15.0,
+    'text.color': 0.9,
+    'mathtext.fontset': 'dejavuserif',
+    'mathtext.default': 'rm',
+ 
+    # Lines
+    'lines.color': 'white',
+    'lines.linewidth': 2.0,
+    'lines.antialiased': True,
+    'lines.marker': None, 
+    'lines.markersize': 10.0,
+    'lines.solid_capstyle': 'butt',
+    'lines.dashed_pattern': [6.0, 6.0],
+    'lines.dashdot_pattern': [3.0, 5.0, 1.0, 5.0],
+    'lines.dotted_pattern': [1.0, 3.0],
+    'lines.markeredgewidth': 0.8,
+    'lines.markerfacecolor': 'none',
+    'lines.markeredgecolor': 'auto',
+
+    # scatter props
+    'scatter.marker': 'o',
+    'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
+
+     # hist props
+     'hist.bins': 50,
+
+    # Documentation for cycler (https://matplotlib.org/cycler/),
+    # Axes
+    'axes.facecolor': '#212946',
+    'axes.edgecolor': '#212946',
+    'axes.linewidth': 4.0,
+    'axes.labelpad': 5.0,
+    'axes.titlesize': 26.0,
+    'axes.titlepad': 20,
+    'axes.titleweight': 'bold',
+    'axes.titlelocation': 'left',
+    'axes3d.grid': True,
+    'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
+    'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
+    'axes.labelsize': 18.0,
+    'axes.labelweight': 'normal',
+    'axes.labelcolor': 0.9,
+    'axes.axisbelow': True,
+    'axes.autolimit_mode': 'round_numbers',
+    'axes.unicode_minus': True,
+    'axes.spines.left': False,
+    'axes.spines.right': False,
+    'axes.spines.top': False,
+    'axes.spines.bottom': False,
+    'axes.formatter.use_locale': True,
+    'axes.formatter.useoffset': False,
+    'axes.formatter.offset_threshold': 2,
+
+
+    'axes.prop_cycle': cycler(
+        color=[
+            'tab:red',
+            'tab:blue',
+            'tab:green',
+            'tab:orange',
+            'tab:purple',
+            'tab:brown',
+            'tab:pink',
+            'tab:gray',
+            'tab:olive',
+            'tab:cyan',
+            'k',
+        ]
+    ),
+    # Grid
+    # grid: bluish dark grey, slightly lighter than background
+    'axes.grid': True,
+    'grid.color': '#2A3459',
+    'grid.alpha': 0.5,
+    'grid.linewidth': 0.7,
+    'grid.linestyle': ':',
+
+     # Ticks X
+    'xtick.alignment': 'center',
+    'xtick.major.size': 10.0, # major tick length in points
+    'xtick.minor.size': 0.2, # minor tick length in points
+    'xtick.major.width': 1.5,  # major tick width in points
+    'xtick.minor.width': 0.5,  # minor tick width in points
+    'xtick.major.pad': 6.0, # distance to major tick label in points
+    'xtick.minor.pad': 3.0, # distance to the minor tick label in points
+    'xtick.minor.visible': False, 
+    'xtick.top': False,
+    'xtick.labelsize': 20.0, # fontsize of the tick labels
+    'xtick.direction': 'in',  # direction: in, out, or inout
+    'xtick.color': 0.9,
+
+    # Ticks Y
+    'ytick.alignment': 'center_baseline',
+    'ytick.major.size': 0.0,
+    'ytick.minor.size': 0.0,
+    'ytick.major.width': 1.0,
+    'ytick.minor.width': 0.5,
+    'ytick.major.pad': 3.0,
+    'ytick.minor.pad': 1.5,
+    'ytick.minor.visible': False,
+    'ytick.right': False,
+    'ytick.left': False,
+    'ytick.labelsize': 20.0,
+    'ytick.color': 0.9,
+    'ytick.direction': 'out',  # direction: in, out, or inout
+
+     # Images
+    'image.aspect': 'equal',
+    'image.cmap': 'gist_heat',
+    'image.origin': 'upper',
+
+    # Figure
+    # background: bluish dark grey
+    'figure.figsize': [11.72, 9.72],
+    'figure.facecolor': '#212946',
+    'figure.edgecolor': '#212946',
+    'figure.subplot.hspace': 0.2,
+    'figure.subplot.wspace': 0.2,
+    'figure.subplot.left': 0.125,
+    'figure.subplot.right': 0.90,
+    'figure.subplot.bottom': 0.11,
+    'figure.subplot.top': 0.88,
+    'figure.titlesize': 28.0,
+    'figure.titleweight': 'bold',
+
+    # set savefig
+    'savefig.dpi': 100.0,
+    'savefig.bbox': 'tight',
+    'savefig.pad_inches': 0.03, # Use virtually all space when we specify figure dimensions
+    'savefig.format': 'png',
+    'savefig.facecolor': '#212946',
+    'savefig.edgecolor': '#212946',
+    'figure.constrained_layout.use': True,
+    'svg.fonttype': 'none',
+    'svg.fonttype': 'path',
+    'svg.hashsalt': None,
+    'svg.image_inline': True,
+
+    # Legend
+    'legend.loc': 'best',
+    'legend.fancybox': True,
+    'legend.frameon': True,
+    'legend.framealpha': 0.7,
+    'legend.numpoints': 1,
+    'legend.scatterpoints': 1,
+    'legend.title_fontsize': 'medium',
+    'legend.fontsize': 'medium',
+    'legend.borderpad': 0.5,  
+    'legend.markerscale': 1.0,  
+    'legend.labelspacing': 0.3, 
+    'legend.columnspacing': 0.5, 
+    'legend.borderaxespad': 0.5,
+    'legend.handlelength': 0.5, 
+    'legend.handleheight': 0.5, 
+    'legend.handletextpad': 0.5,
+    'legend.facecolor': 'inherit',
+    'legend.edgecolor': 'inherit',
+
+    'boxplot.boxprops.color': 'white',
+    'boxplot.capprops.color': 'white',
+    'boxplot.flierprops.color': 'white',
+    'boxplot.flierprops.markeredgecolor': 'white',
+    'boxplot.whiskerprops.color': 'white',
+
+     # Date
+    'date.autoformatter.year': "%Y",
+    'date.autoformatter.month': "%b'%y",
+    'date.autoformatter.day': "%b %d %Y",
+    'date.autoformatter.hour': "%H:%M:%S",
+}
 
 
 academic = {
