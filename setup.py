@@ -5,6 +5,8 @@
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 import warnings
+import os
+import sys
 import jotaviz
 
 VERSION = jotaviz.__version__

@@ -8,6 +8,10 @@ from urllib.request import urlopen
 import matplotlib.font_manager as fm
 import numpy as np
 from PIL import Image
+import sys
+import os
+import shutil
+from typing import Union
 
 
 __all__ = ['add_image', 'validate_ax', 'set_visible', 'FontManager', 'set_labels']
@@ -151,43 +155,63 @@ def set_labels(ax, label_value, label_axis):
 
 
 
+
+
 class FontManager:
-    """Utility to load fun fonts from https://fonts.google.com/ for matplotlib.
-    Find a nice font at https://fonts.google.com/, and then get its corresponding URL
-    from https://github.com/google/fonts/.
 
+    @classmethod
+    def init_font_manager(cls):
+        # Linux
+        if sys.platform.startswith("linux"):
+            try:
+                if not os.path.isdir(os.path.expanduser('~/.fonts/')):
+                    os.mkdir(os.path.expanduser('~/.fonts/'))
+                return True
+            except Exception as err:
+                sys.stderr.write("FontManager error: " + str(err) + "\n")
+                return False
 
-    The FontManager is taken from the ridge_map package by Colin Carroll (@colindcarroll).
+        # other platforms
+        else:
+            return True
 
-    Parameters
-    ----------
-    url : str, default is the url for Roboto-Regular.ttf
-        Can really be any .ttf file, but probably looks like
-        'https://github.com/google/fonts/blob/main/ofl/cinzel/static/Cinzel-Regular.ttf?raw=true'
-        Note make sure the ?raw=true is at the end.
+    @classmethod
+    def windows_load_font(cls, font_path: Union[str, bytes], private: bool = True, enumerable: bool = False) -> bool:
+        """ Function taken from: https://stackoverflow.com/questions/11993290/truly-custom-font-in-tkinter/30631309#30631309 """
 
-    Examples
-    --------
-    >>> from jotaviz import FontManager
-    >>> import matplotlib.pyplot as plt
-    >>> font_url = 'https://github.com/google/fonts/blob/main/ofl/abel/Abel-Regular.ttf?raw=true'
-    >>> fm = FontManager(url=font_url)
-    >>> fig, ax = plt.subplots()
-    >>> ax.text(x=0.5, y=0.5, s="Good content.", fontproperties=fm.prop, size=30)
-    """
+        from ctypes import windll, byref, create_unicode_buffer, create_string_buffer
 
-    def __init__(self,
-                 url=('https://github.com/google/fonts/blob/main/'
-                      'apache/roboto/static/Roboto-Regular.ttf?raw=true')):
-        self.url = url
-        with NamedTemporaryFile(delete=False, suffix=".ttf") as temp_file:
-            temp_file.write(urlopen(self.url).read())
-            self._prop = fm.FontProperties(fname=temp_file.name)
+        FR_PRIVATE = 0x10
+        FR_NOT_ENUM = 0x20
 
-    @property
-    def prop(self):
-        """Get matplotlib.font_manager.FontProperties object that sets the custom font."""
-        return self._prop
+        if isinstance(font_path, bytes):
+            path_buffer = create_string_buffer(font_path)
+            add_font_resource_ex = windll.gdi32.AddFontResourceExA
+        elif isinstance(font_path, str):
+            path_buffer = create_unicode_buffer(font_path)
+            add_font_resource_ex = windll.gdi32.AddFontResourceExW
+        else:
+            raise TypeError('font_path must be of type bytes or str')
 
-    def __repr__(self):
-        return f'{self.__class__.__name__}(font_url={self.url})'
+        flags = (FR_PRIVATE if private else 0) | (FR_NOT_ENUM if not enumerable else 0)
+        num_fonts_added = add_font_resource_ex(byref(path_buffer), flags, 0)
+        return bool(num_fonts_added)
+
+    @classmethod
+    def load_font(cls, font_path: str) -> bool:
+        # Windows
+        if sys.platform.startswith("win"):
+            return cls.windows_load_font(font_path, private=True, enumerable=False)
+
+        # Linux
+        elif sys.platform.startswith("linux"):
+            try:
+                shutil.copy(font_path, os.path.expanduser("~/.fonts/"))
+                return True
+            except Exception as err:
+                sys.stderr.write("FontManager error: " + str(err) + "\n")
+                return False
+
+        # macOS and others
+        else:
+            return False

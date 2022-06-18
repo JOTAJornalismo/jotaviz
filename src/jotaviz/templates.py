@@ -4,21 +4,6 @@ from cycler import cycler
 available =['jotagray', 'jotawhite', 'jotaglass', 'jotadark', 'jotablack', 'academic']
 
 jotagray = {
-    # animation props
-    'agg.path.chunksize': 0,
-    'animation.avconv_args': [],
-    'animation.avconv_path': 'avconv',
-    'animation.bitrate': -1,
-    'animation.codec': 'h264',
-    'animation.convert_args': [],
-    'animation.convert_path': 'convert',
-    'animation.embed_limit': 20.0,
-    'animation.ffmpeg_args': [],
-    'animation.ffmpeg_path': 'ffmpeg',
-    'animation.frame_format': 'png',
-    'animation.html': 'none',
-    'animation.html_args': [],
-    'animation.writer': 'ffmpeg',
 
     # errorbar props
     'errorbar.capsize': 0.0,
@@ -72,12 +57,12 @@ jotagray = {
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
     'axes.titlesize': 26.0,
-    'axes.titlepad': 20,
+    'axes.titlepad': 20.0,
     'axes.titleweight': 'bold',
-    'axes.titlelocation': 'left',
+    'axes.titlelocation': 'center',
     'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
-    'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
+    'axes.ymargin': 0.05, # change the y axis so there is no white space at the end
     'axes.labelsize': 18.0,
     'axes.labelweight': 'normal',
     'axes.labelcolor': '#222222',
@@ -196,30 +181,16 @@ jotagray = {
     'legend.edgecolor': 'inherit',
 
      # Date
-    'date.autoformatter.year': '%Y',
-    'date.autoformatter.month': "%b'%y",
-    'date.autoformatter.day': '%b %d %Y',
-    'date.autoformatter.hour': '%H:%M:%S',
+    'date.autoformatter.year': "%Y",
+    'date.autoformatter.month': "%b",
+    'date.autoformatter.day': "%d",
+    'date.autoformatter.hour': "%H:%M",
+    'date.autoformatter.minute': "%H:%M"
 }
 
 
 
 jotawhite = {
-    # animation props
-    'agg.path.chunksize': 0,
-    'animation.avconv_args': [],
-    'animation.avconv_path': 'avconv',
-    'animation.bitrate': -1,
-    'animation.codec': 'h264',
-    'animation.convert_args': [],
-    'animation.convert_path': 'convert',
-    'animation.embed_limit': 20.0,
-    'animation.ffmpeg_args': [],
-    'animation.ffmpeg_path': 'ffmpeg',
-    'animation.frame_format': 'png',
-    'animation.html': 'none',
-    'animation.html_args': [],
-    'animation.writer': 'ffmpeg',
 
     # errorbar props
     'errorbar.capsize': 0.0,
@@ -273,12 +244,12 @@ jotawhite = {
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
     'axes.titlesize': 26.0,
-    'axes.titlepad': 20,
+    'axes.titlepad': 20.0,
     'axes.titleweight': 'bold',
-    'axes.titlelocation': 'left',
+    'axes.titlelocation': 'center',
     'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
-    'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
+    'axes.ymargin': 0.05, # change the y axis so there is no white space at the end
     'axes.labelsize': 18.0,
     'axes.labelweight': 'normal',
     'axes.labelcolor': '#222222',
@@ -354,12 +325,12 @@ jotawhite = {
     'figure.figsize': [11.72, 9.72],
     'figure.facecolor': 'white',
     'figure.edgecolor': 'white',
-    'figure.subplot.hspace': 0.2,
-    'figure.subplot.wspace': 0.2,
-    'figure.subplot.left': 0.125,
-    'figure.subplot.right': 0.90,
-    'figure.subplot.bottom': 0.11,
-    'figure.subplot.top': 0.88,
+    'figure.subplot.hspace': 0.156,
+    'figure.subplot.wspace': 0.156,
+    'figure.subplot.left': 0.177,
+    'figure.subplot.right': 0.946,
+    'figure.subplot.bottom': 0.156,
+    'figure.subplot.top': 0.965,
     'figure.titlesize': 28.0,
     'figure.titleweight': 'bold',
 
@@ -402,11 +373,12 @@ jotawhite = {
     'boxplot.flierprops.markeredgecolor': '#555555',
     'boxplot.whiskerprops.color': '#555555',
 
-     # Date
+    # Date
     'date.autoformatter.year': "%Y",
-    'date.autoformatter.month': "%b'%Y",
-    'date.autoformatter.day': "%b %d %Y",
-    'date.autoformatter.hour': "%H:%M:%S",
+    'date.autoformatter.month': "%b",
+    'date.autoformatter.day': "%d",
+    'date.autoformatter.hour': "%H:%M",
+    'date.autoformatter.minute': "%H:%M"
 }
 
 
@@ -414,21 +386,6 @@ jotawhite = {
 
 
 jotaglass = {
-    # animation props
-    'agg.path.chunksize': 0,
-    'animation.avconv_args': [],
-    'animation.avconv_path': 'avconv',
-    'animation.bitrate': -1,
-    'animation.codec': 'h264',
-    'animation.convert_args': [],
-    'animation.convert_path': 'convert',
-    'animation.embed_limit': 20.0,
-    'animation.ffmpeg_args': [],
-    'animation.ffmpeg_path': 'ffmpeg',
-    'animation.frame_format': 'png',
-    'animation.html': 'none',
-    'animation.html_args': [],
-    'animation.writer': 'ffmpeg',
 
     # errorbar props
     'errorbar.capsize': 0.0,
@@ -482,12 +439,12 @@ jotaglass = {
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
     'axes.titlesize': 26.0,
-    'axes.titlepad': 20,
+    'axes.titlepad': 20.0,
     'axes.titleweight': 'bold',
-    'axes.titlelocation': 'left',
+    'axes.titlelocation': 'center',
     'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
-    'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
+    'axes.ymargin': 0.05, # change the y axis so there is no white space at the end
     'axes.labelsize': 18.0,
     'axes.labelweight': 'normal',
     'axes.labelcolor': '#222222',
@@ -563,12 +520,12 @@ jotaglass = {
     'figure.figsize': [11.72, 9.72],
     'figure.facecolor': 'white',
     'figure.edgecolor': 'white',
-    'figure.subplot.hspace': 0.2,
-    'figure.subplot.wspace': 0.2,
-    'figure.subplot.left': 0.125,
-    'figure.subplot.right': 0.90,
-    'figure.subplot.bottom': 0.11,
-    'figure.subplot.top': 0.88,
+    'figure.subplot.hspace': 0.156,
+    'figure.subplot.wspace': 0.156,
+    'figure.subplot.left': 0.177,
+    'figure.subplot.right': 0.946,
+    'figure.subplot.bottom': 0.156,
+    'figure.subplot.top': 0.965,
     'figure.titlesize': 28.0,
     'figure.titleweight': 'bold',
 
@@ -612,32 +569,18 @@ jotaglass = {
     'boxplot.flierprops.markeredgecolor': '#555555',
     'boxplot.whiskerprops.color': '#555555',
 
-     # Date
+    # Date
     'date.autoformatter.year': "%Y",
-    'date.autoformatter.month': "%b'%y",
-    'date.autoformatter.day': "%b %d %Y",
-    'date.autoformatter.hour': "%H:%M:%S",
+    'date.autoformatter.month': "%b",
+    'date.autoformatter.day': "%d",
+    'date.autoformatter.hour': "%H:%M",
+    'date.autoformatter.minute': "%H:%M"
 }
 
 
 
 
 jotablack = {
-    # animation props
-    'agg.path.chunksize': 0,
-    'animation.avconv_args': [],
-    'animation.avconv_path': 'avconv',
-    'animation.bitrate': -1,
-    'animation.codec': 'h264',
-    'animation.convert_args': [],
-    'animation.convert_path': 'convert',
-    'animation.embed_limit': 20.0,
-    'animation.ffmpeg_args': [],
-    'animation.ffmpeg_path': 'ffmpeg',
-    'animation.frame_format': 'png',
-    'animation.html': 'none',
-    'animation.html_args': [],
-    'animation.writer': 'ffmpeg',
 
     # errorbar props
     'errorbar.capsize': 0.0,
@@ -692,12 +635,12 @@ jotablack = {
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
     'axes.titlesize': 26.0,
-    'axes.titlepad': 20,
+    'axes.titlepad': 20.0,
     'axes.titleweight': 'bold',
-    'axes.titlelocation': 'left',
+    'axes.titlelocation': 'center',
     'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
-    'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
+    'axes.ymargin': 0.05, # change the y axis so there is no white space at the end
     'axes.labelsize': 18.0,
     'axes.labelweight': 'normal',
     'axes.labelcolor': 'white',
@@ -732,7 +675,7 @@ jotablack = {
     'axes.grid': True,
     'grid.color': 'white',
     'grid.alpha': 0.5,
-    'grid.linewidth': 0.7,
+    'grid.linewidth': 0.8,
     'grid.linestyle': ':',
 
      # Ticks X
@@ -773,12 +716,12 @@ jotablack = {
     'figure.figsize': [11.72, 9.72],
     'figure.facecolor': 'black',
     'figure.edgecolor': 'black',
-    'figure.subplot.hspace': 0.2,
-    'figure.subplot.wspace': 0.2,
-    'figure.subplot.left': 0.125,
-    'figure.subplot.right': 0.90,
-    'figure.subplot.bottom': 0.11,
-    'figure.subplot.top': 0.88,
+    'figure.subplot.hspace': 0.156,
+    'figure.subplot.wspace': 0.156,
+    'figure.subplot.left': 0.177,
+    'figure.subplot.right': 0.946,
+    'figure.subplot.bottom': 0.156,
+    'figure.subplot.top': 0.965,
     'figure.titlesize': 28.0,
     'figure.titleweight': 'bold',
 
@@ -821,32 +764,18 @@ jotablack = {
     'boxplot.flierprops.markeredgecolor': 'white',
     'boxplot.whiskerprops.color': 'white',
 
-     # Date
+    # Date
     'date.autoformatter.year': "%Y",
-    'date.autoformatter.month': "%b'%y",
-    'date.autoformatter.day': "%b %d %Y",
-    'date.autoformatter.hour': "%H:%M:%S",
+    'date.autoformatter.month': "%b",
+    'date.autoformatter.day': "%d",
+    'date.autoformatter.hour': "%H:%M",
+    'date.autoformatter.minute': "%H:%M"
 }
 
 
 
 
 jotadark = {
-    # animation props
-    'agg.path.chunksize': 0,
-    'animation.avconv_args': [],
-    'animation.avconv_path': 'avconv',
-    'animation.bitrate': -1,
-    'animation.codec': 'h264',
-    'animation.convert_args': [],
-    'animation.convert_path': 'convert',
-    'animation.embed_limit': 20.0,
-    'animation.ffmpeg_args': [],
-    'animation.ffmpeg_path': 'ffmpeg',
-    'animation.frame_format': 'png',
-    'animation.html': 'none',
-    'animation.html_args': [],
-    'animation.writer': 'ffmpeg',
 
     # errorbar props
     'errorbar.capsize': 0.0,
@@ -902,12 +831,12 @@ jotadark = {
     'axes.linewidth': 4.0,
     'axes.labelpad': 5.0,
     'axes.titlesize': 26.0,
-    'axes.titlepad': 20,
+    'axes.titlepad': 20.0,
     'axes.titleweight': 'bold',
-    'axes.titlelocation': 'left',
+    'axes.titlelocation': 'center',
     'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
-    'axes.ymargin': 0.0, # change the y axis so there is no white space at the end
+    'axes.ymargin': 0.05, # change the y axis so there is no white space at the end
     'axes.labelsize': 18.0,
     'axes.labelweight': 'normal',
     'axes.labelcolor': '#f1f1f1',
@@ -941,9 +870,9 @@ jotadark = {
     # Grid
     # grid: bluish dark grey, slightly lighter than background
     'axes.grid': True,
-    'grid.color': '#2A3459',
+    'grid.color': '#f1f1f1',
     'grid.alpha': 0.5,
-    'grid.linewidth': 0.7,
+    'grid.linewidth': 0.8,
     'grid.linestyle': ':',
 
      # Ticks X
@@ -985,12 +914,12 @@ jotadark = {
     'figure.figsize': [11.72, 9.72],
     'figure.facecolor': '#212946',
     'figure.edgecolor': '#212946',
-    'figure.subplot.hspace': 0.2,
-    'figure.subplot.wspace': 0.2,
-    'figure.subplot.left': 0.125,
-    'figure.subplot.right': 0.90,
-    'figure.subplot.bottom': 0.11,
-    'figure.subplot.top': 0.88,
+    'figure.subplot.hspace': 0.156,
+    'figure.subplot.wspace': 0.156,
+    'figure.subplot.left': 0.177,
+    'figure.subplot.right': 0.946,
+    'figure.subplot.bottom': 0.156,
+    'figure.subplot.top': 0.965,
     'figure.titlesize': 28.0,
     'figure.titleweight': 'bold',
 
@@ -1033,11 +962,12 @@ jotadark = {
     'boxplot.flierprops.markeredgecolor': 'white',
     'boxplot.whiskerprops.color': 'white',
 
-     # Date
+    # Date
     'date.autoformatter.year': "%Y",
-    'date.autoformatter.month': "%b'%y",
-    'date.autoformatter.day': "%b %d %Y",
-    'date.autoformatter.hour': "%H:%M:%S",
+    'date.autoformatter.month': "%b",
+    'date.autoformatter.day': "%d",
+    'date.autoformatter.hour': "%H:%M",
+    'date.autoformatter.minute': "%H:%M"
 }
 
 
