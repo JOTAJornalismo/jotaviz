@@ -7,6 +7,7 @@ from urllib.request import urlopen
 
 import matplotlib.font_manager as fm
 import numpy as np
+import pandas as pd
 from PIL import Image
 import sys
 import os
@@ -14,7 +15,7 @@ import shutil
 from typing import Union
 
 
-__all__ = ['add_image', 'validate_ax', 'set_visible', 'FontManager', 'set_labels']
+__all__ = ['add_image', 'validate_ax', 'set_visible', 'FontManager', 'set_labels', 'remove_na', 'sex_symbol']
 
 
 def add_image(image, fig, left, bottom, width=None, height=None, **kwargs):
@@ -215,3 +216,25 @@ class FontManager:
         # macOS and others
         else:
             return False
+
+
+def remove_na(vector):
+    """Helper method for removing null values from data vectors.
+    Parameters
+    ----------
+    vector : vector object
+        Must implement boolean masking with [] subscript syntax.
+    Returns
+    -------
+    clean_clean : same type as ``vector``
+        Vector of data with null values removed. May be a copy or a view.
+    """
+    return vector[pd.notnull(vector)]
+
+
+
+def sex_symbol(is_female):
+    if is_female:
+        return "♀"
+    else:
+        return "♂"

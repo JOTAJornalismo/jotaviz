@@ -34,7 +34,7 @@ jotagray = {
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
     'lines.marker': None, 
-    'lines.markersize': 10.0,
+    'lines.markersize': 8.0,
     'lines.solid_capstyle': 'butt',
     'lines.dashed_pattern': [6.0, 6.0],
     'lines.dashdot_pattern': [3.0, 5.0, 1.0, 5.0],
@@ -48,7 +48,7 @@ jotagray = {
     'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
 
      # hist props
-     'hist.bins': 50,
+     'hist.bins': 10,
 
     # AXES
     # Documentation for cycler (https://matplotlib.org/cycler/),
@@ -221,7 +221,7 @@ jotawhite = {
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
     'lines.marker': None, 
-    'lines.markersize': 10.0,
+    'lines.markersize': 8.0,
     'lines.solid_capstyle': 'butt',
     'lines.dashed_pattern': [6.0, 6.0],
     'lines.dashdot_pattern': [3.0, 5.0, 1.0, 5.0],
@@ -235,7 +235,7 @@ jotawhite = {
     'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
 
      # hist props
-     'hist.bins': 50,
+     'hist.bins': 10,
 
     # Documentation for cycler (https://matplotlib.org/cycler/),
     # Axes
@@ -416,7 +416,7 @@ jotaglass = {
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
     'lines.marker': None, 
-    'lines.markersize': 10.0,
+    'lines.markersize': 8.0,
     'lines.solid_capstyle': 'butt',
     'lines.dashed_pattern': [6.0, 6.0],
     'lines.dashdot_pattern': [3.0, 5.0, 1.0, 5.0],
@@ -430,7 +430,7 @@ jotaglass = {
     'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
 
      # hist props
-     'hist.bins': 50,
+     'hist.bins': 10,
 
     # Documentation for cycler (https://matplotlib.org/cycler/),
     # Axes
@@ -612,7 +612,7 @@ jotablack = {
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
     'lines.marker': None, 
-    'lines.markersize': 10.0,
+    'lines.markersize': 8.0,
     'lines.solid_capstyle': 'butt',
     'lines.dashed_pattern': [6.0, 6.0],
     'lines.dashdot_pattern': [3.0, 5.0, 1.0, 5.0],
@@ -626,7 +626,7 @@ jotablack = {
     'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
 
      # hist props
-     'hist.bins': 50,
+     'hist.bins': 10,
 
     # Documentation for cycler (https://matplotlib.org/cycler/),
     # Axes
@@ -808,7 +808,7 @@ jotadark = {
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
     'lines.marker': None, 
-    'lines.markersize': 10.0,
+    'lines.markersize': 8.0,
     'lines.solid_capstyle': 'butt',
     'lines.dashed_pattern': [6.0, 6.0],
     'lines.dashdot_pattern': [3.0, 5.0, 1.0, 5.0],
@@ -822,7 +822,7 @@ jotadark = {
     'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
 
      # hist props
-     'hist.bins': 50,
+     'hist.bins': 10,
 
     # Documentation for cycler (https://matplotlib.org/cycler/),
     # Axes
