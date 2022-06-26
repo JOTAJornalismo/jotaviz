@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+""" Python module containing helper functions for jotaviz."""
+
+available = ['crayons']
+
 crayons = {'Almond': '#EFDECD',
            'Antique Brass': '#CD9575',
            'Apricot': '#FDD9B5',
@@ -118,4 +124,5 @@ crayons = {'Almond': '#EFDECD',
            'Wisteria': '#CDA4DE',
            'Yellow': '#FCE883',
            'Yellow Green': '#C5E384',
-           'Yellow Orange': '#FFAE42'}
+           'Yellow Orange': '#FFAE42'
+}

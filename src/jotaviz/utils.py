@@ -5,6 +5,7 @@
 from tempfile import NamedTemporaryFile
 from urllib.request import urlopen
 
+import matplotlib as mpl
 import matplotlib.font_manager as fm
 import numpy as np
 import pandas as pd
@@ -15,7 +16,7 @@ import shutil
 from typing import Union
 
 
-__all__ = ['add_image', 'validate_ax', 'set_visible', 'FontManager', 'set_labels', 'remove_na', 'sex_symbol']
+__all__ = ['add_image', 'validate_ax', 'set_visible', 'FontManager', 'set_labels', 'remove_na', 'sex_symbol', 'dollar_format', 'real_format', 'currency_format']
 
 
 def add_image(image, fig, left, bottom, width=None, height=None, **kwargs):
@@ -238,3 +239,34 @@ def sex_symbol(is_female):
         return "♀"
     else:
         return "♂"
+
+
+
+def dollar_format(suffix=""):
+    """Dollar formatter for matplotlib.
+    :param suffix: Suffix to append, e.g. 'B'. Defaults to ''.
+    :returns: FuncFormatter.
+    """
+    return currency_format(currency="USD", suffix=suffix)
+
+
+def real_format(suffix=""):
+    """Dollar formatter for matplotlib.
+    :param suffix: Suffix to append, e.g. 'B'. Defaults to ''.
+    :returns: FuncFormatter.
+    """
+    return currency_format(currency="BRL", suffix=suffix)
+
+
+def currency_format(currency="BRL", suffix=""):
+    """Currency formatter for matplotlib.
+    :param currency: Name of the currency, e.g. 'USD', 'GBP', 'BRL', 'ARS'.
+    :param suffix: Suffix to append, e.g. 'B'. Defaults to ''.
+    :returns: FuncFormatter.
+    """
+
+    prefix = {"BRL": "R$", "USD": "$", "GBP": "£", "ARS": "$"}[currency]
+
+    return mpl.ticker.FuncFormatter(
+        lambda x, _: prefix + format(int(x), ",") + suffix
+    )
