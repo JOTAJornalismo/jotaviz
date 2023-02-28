@@ -1,7 +1,7 @@
 # LATEX
 from cycler import cycler
 
-available =['jotagray', 'jotawhite', 'jotaglass', 'jotadark', 'jotablack', 'academic']
+available =['jotagray', 'jotagrey', 'jotawhite', 'jotaglass', 'jotadark', 'jotablack', 'academic']
 
 jotagray = {
 
@@ -33,7 +33,7 @@ jotagray = {
     # Lines
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
-    'lines.marker': None, 
+    'lines.marker': 'none', 
     'lines.markersize': 8.0,
     'lines.solid_capstyle': 'butt',
     'lines.dashed_pattern': [6.0, 6.0],
@@ -55,15 +55,14 @@ jotagray = {
     'axes.facecolor': '#ebecf0',
     'axes.edgecolor': '#ebecf0',
     'axes.linewidth': 4.0,
-    'axes.labelpad': 5.0,
-    'axes.titlesize': 26.0,
-    'axes.titlepad': 20.0,
+    'axes.titlesize': 26.0, # fontsize of the axes title
+    'axes.titlepad': 20.0, # pad between axes and title in points
     'axes.titleweight': 'bold',
     'axes.titlelocation': 'center',
-    'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
     'axes.ymargin': 0.05, # change the y axis so there is no white space at the end
-    'axes.labelsize': 18.0,
+    'axes.labelsize': 18.0, # fontsize of the x any y labels
+    'axes.labelpad': 5.0, # space between label and axis
     'axes.labelweight': 'normal',
     'axes.labelcolor': '#222222',
     'axes.axisbelow': True,
@@ -73,9 +72,18 @@ jotagray = {
     'axes.spines.right': False,
     'axes.spines.top': False,
     'axes.spines.bottom': False,
-    'axes.formatter.use_locale': True,
-    'axes.formatter.useoffset': False,
-    'axes.formatter.offset_threshold': 2,
+    # Use scientific notation
+    'axes.formatter.min_exponent': 0,  # minimum exponent to format in scientific notation
+    'axes.formatter.use_locale': True, 
+    'axes.formatter.useoffset': True, # If True, the tick label formatter
+                                      # will default to labeling ticks relative
+                                      # to an offset when the data range is
+                                      # small compared to the minimum absolute
+                                      # value of the data.
+    'axes.formatter.offset_threshold': 4, # When useoffset is True, the offset
+                                          # will be used when it can remove
+                                          # at least this number of significant
+                                          # digits from tick labels.
 
     'axes.prop_cycle': cycler(
         color=[
@@ -93,7 +101,8 @@ jotagray = {
         ]
     ),
      # Grid
-    'axes.grid': True,
+    'axes.grid': True, # display grid or not
+    'axes3d.grid': True, 
     'grid.color': 'k',
     'grid.alpha': 0.5,
     'grid.linewidth': 0.9,
@@ -114,7 +123,7 @@ jotagray = {
     'xtick.color': '#333333',
 
     # Ticks Y
-    'ytick.alignment': 'center_baseline',
+    'ytick.alignment': 'bottom',
     'ytick.major.size': 0.0,
     'ytick.minor.size': 0.0,
     'ytick.major.width': 1.0,
@@ -143,8 +152,8 @@ jotagray = {
     'figure.subplot.right': 0.946,
     'figure.subplot.bottom': 0.156,
     'figure.subplot.top': 0.965,
-    'figure.titlesize': 28.0,
-    'figure.titleweight': 'bold',
+    'figure.titlesize': 28.0, # size of the figure title (Figure.suptitle())
+    'figure.titleweight': 'bold',  # weight of the figure title
 
 
     # set savefig
@@ -155,6 +164,7 @@ jotagray = {
     'savefig.facecolor': '#ebecf0',
     'savefig.edgecolor': '#ebecf0',
     'figure.constrained_layout.use': True,
+    'pdf.fonttype': 3,  # Output Type 3 (Type3) or Type 42 (TrueType)
     'svg.fonttype': 'none',
     'svg.fonttype': 'path',
     'svg.hashsalt': None,
@@ -170,12 +180,12 @@ jotagray = {
     'legend.title_fontsize': 'medium',
     'legend.fontsize': 'medium',
     'legend.borderpad': 0.5,   # border whitespace in fontsize units
-    'legend.markerscale': 1.0,  # the relative size of legend markers vs. original
+    'legend.markerscale': 1.5,  # the relative size of legend markers vs. original
     'legend.labelspacing': 0.3,  # the vertical space between the legend entries in fraction of fontsize
-    'legend.columnspacing': 0.5, # the border between the axes and legend edge in fraction of fontsize
+    'legend.columnspacing': 1.0, # the border between the axes and legend edge in fraction of fontsize
     'legend.borderaxespad': 0.5, # the border between the axes and legend edge in fraction of fontsize
-    'legend.handlelength': 0.5,  # the length of the legend lines in fraction of fontsize
-    'legend.handleheight': 0.5,  # the height of the legend handle in fraction of fontsize
+    'legend.handlelength': 1.0,  # the length of the legend lines in fraction of fontsize
+    'legend.handleheight': 0.7,  # the height of the legend handle in fraction of fontsize
     'legend.handletextpad': 0.5, # the space between the legend line and legend text in fraction of fontsize
     'legend.facecolor': 'inherit',
     'legend.edgecolor': 'inherit',
@@ -188,6 +198,8 @@ jotagray = {
     'date.autoformatter.minute': "%H:%M"
 }
 
+
+jotagrey = jotagray
 
 
 jotawhite = {
@@ -220,7 +232,7 @@ jotawhite = {
     # Lines
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
-    'lines.marker': None, 
+    'lines.marker': 'none', 
     'lines.markersize': 8.0,
     'lines.solid_capstyle': 'butt',
     'lines.dashed_pattern': [6.0, 6.0],
@@ -247,7 +259,6 @@ jotawhite = {
     'axes.titlepad': 20.0,
     'axes.titleweight': 'bold',
     'axes.titlelocation': 'center',
-    'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
     'axes.ymargin': 0.05, # change the y axis so there is no white space at the end
     'axes.labelsize': 18.0,
@@ -260,9 +271,18 @@ jotawhite = {
     'axes.spines.right': False,
     'axes.spines.top': False,
     'axes.spines.bottom': False,
-    'axes.formatter.use_locale': True,
-    'axes.formatter.useoffset': False,
-    'axes.formatter.offset_threshold': 2,
+    # Use scientific notation
+    'axes.formatter.min_exponent': 0,  # minimum exponent to format in scientific notation
+    'axes.formatter.use_locale': True, 
+    'axes.formatter.useoffset': True, # If True, the tick label formatter
+                                      # will default to labeling ticks relative
+                                      # to an offset when the data range is
+                                      # small compared to the minimum absolute
+                                      # value of the data.
+    'axes.formatter.offset_threshold': 4, # When useoffset is True, the offset
+                                          # will be used when it can remove
+                                          # at least this number of significant
+                                          # digits from tick labels.
 
 
     'axes.prop_cycle': cycler(
@@ -282,6 +302,7 @@ jotawhite = {
     ),
     # Grid
     'axes.grid': True,
+    'axes3d.grid': True,
     'grid.color': 'k',
     'grid.alpha': 0.5,
     'grid.linewidth': 0.7,
@@ -302,7 +323,7 @@ jotawhite = {
     'xtick.color': '#333333',
 
     # Ticks Y
-    'ytick.alignment': 'center_baseline',
+    'ytick.alignment': 'center',
     'ytick.major.size': 0.0,
     'ytick.minor.size': 0.0,
     'ytick.major.width': 1.0,
@@ -342,6 +363,7 @@ jotawhite = {
     'savefig.facecolor': 'white',
     'savefig.edgecolor': 'white',
     'figure.constrained_layout.use': True,
+    'pdf.fonttype': 3,  # Output Type 3 (Type3) or Type 42 (TrueType)
     'svg.fonttype': 'none',
     'svg.fonttype': 'path',
     'svg.hashsalt': None,
@@ -415,7 +437,7 @@ jotaglass = {
     # Lines
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
-    'lines.marker': None, 
+    'lines.marker': 'none', 
     'lines.markersize': 8.0,
     'lines.solid_capstyle': 'butt',
     'lines.dashed_pattern': [6.0, 6.0],
@@ -442,7 +464,6 @@ jotaglass = {
     'axes.titlepad': 20.0,
     'axes.titleweight': 'bold',
     'axes.titlelocation': 'center',
-    'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
     'axes.ymargin': 0.05, # change the y axis so there is no white space at the end
     'axes.labelsize': 18.0,
@@ -455,9 +476,18 @@ jotaglass = {
     'axes.spines.right': False,
     'axes.spines.top': False,
     'axes.spines.bottom': False,
-    'axes.formatter.use_locale': True,
-    'axes.formatter.useoffset': False,
-    'axes.formatter.offset_threshold': 2,
+    # Use scientific notation
+    'axes.formatter.min_exponent': 0,  # minimum exponent to format in scientific notation
+    'axes.formatter.use_locale': True, 
+    'axes.formatter.useoffset': True, # If True, the tick label formatter
+                                      # will default to labeling ticks relative
+                                      # to an offset when the data range is
+                                      # small compared to the minimum absolute
+                                      # value of the data.
+    'axes.formatter.offset_threshold': 4, # When useoffset is True, the offset
+                                          # will be used when it can remove
+                                          # at least this number of significant
+                                          # digits from tick labels.
 
 
     'axes.prop_cycle': cycler(
@@ -477,6 +507,7 @@ jotaglass = {
     ),
     # Grid
     'axes.grid': True,
+    'axes3d.grid': True,
     'grid.color': 'k',
     'grid.alpha': 0.5,
     'grid.linewidth': 0.7,
@@ -497,7 +528,7 @@ jotaglass = {
     'xtick.color': '#333333',
 
     # Ticks Y
-    'ytick.alignment': 'center_baseline',
+    'ytick.alignment': 'center',
     'ytick.major.size': 0.0,
     'ytick.minor.size': 0.0,
     'ytick.major.width': 1.0,
@@ -538,6 +569,7 @@ jotaglass = {
     'savefig.edgecolor': 'none',
     'savefig.transparent': True,
     'figure.constrained_layout.use': True,
+    'pdf.fonttype': 3,  # Output Type 3 (Type3) or Type 42 (TrueType)
     'svg.fonttype': 'none',
     'svg.fonttype': 'path',
     'svg.hashsalt': None,
@@ -611,7 +643,7 @@ jotablack = {
     'lines.color': 'white',
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
-    'lines.marker': None, 
+    'lines.marker': 'none', 
     'lines.markersize': 8.0,
     'lines.solid_capstyle': 'butt',
     'lines.dashed_pattern': [6.0, 6.0],
@@ -638,7 +670,6 @@ jotablack = {
     'axes.titlepad': 20.0,
     'axes.titleweight': 'bold',
     'axes.titlelocation': 'center',
-    'axes3d.grid': True,
     'axes.xmargin': 0.0, # change the x axis so there is no white space at the end
     'axes.ymargin': 0.05, # change the y axis so there is no white space at the end
     'axes.labelsize': 18.0,
@@ -651,9 +682,18 @@ jotablack = {
     'axes.spines.right': False,
     'axes.spines.top': False,
     'axes.spines.bottom': False,
-    'axes.formatter.use_locale': True,
-    'axes.formatter.useoffset': False,
-    'axes.formatter.offset_threshold': 2,
+    # Use scientific notation
+    'axes.formatter.min_exponent': 0,  # minimum exponent to format in scientific notation
+    'axes.formatter.use_locale': True, 
+    'axes.formatter.useoffset': True, # If True, the tick label formatter
+                                      # will default to labeling ticks relative
+                                      # to an offset when the data range is
+                                      # small compared to the minimum absolute
+                                      # value of the data.
+    'axes.formatter.offset_threshold': 4, # When useoffset is True, the offset
+                                          # will be used when it can remove
+                                          # at least this number of significant
+                                          # digits from tick labels.
 
 
     'axes.prop_cycle': cycler(
@@ -673,6 +713,7 @@ jotablack = {
     ),
     # Grid
     'axes.grid': True,
+    'axes3d.grid': True,
     'grid.color': 'white',
     'grid.alpha': 0.5,
     'grid.linewidth': 0.8,
@@ -693,7 +734,7 @@ jotablack = {
     'xtick.color': 'white',
 
     # Ticks Y
-    'ytick.alignment': 'center_baseline',
+    'ytick.alignment': 'center',
     'ytick.major.size': 0.0,
     'ytick.minor.size': 0.0,
     'ytick.major.width': 1.0,
@@ -733,6 +774,7 @@ jotablack = {
     'savefig.facecolor': 'black',
     'savefig.edgecolor': 'black',
     'figure.constrained_layout.use': True,
+    'pdf.fonttype': 3,  # Output Type 3 (Type3) or Type 42 (TrueType)
     'svg.fonttype': 'none',
     'svg.fonttype': 'path',
     'svg.hashsalt': None,
@@ -807,7 +849,7 @@ jotadark = {
     'lines.color': '#f1f1f1',
     'lines.linewidth': 2.0,
     'lines.antialiased': True,
-    'lines.marker': None, 
+    'lines.marker': 'none', 
     'lines.markersize': 8.0,
     'lines.solid_capstyle': 'butt',
     'lines.dashed_pattern': [6.0, 6.0],
@@ -846,10 +888,19 @@ jotadark = {
     'axes.spines.left': False,
     'axes.spines.right': False,
     'axes.spines.top': False,
-    'axes.spines.bottom': False,
-    'axes.formatter.use_locale': True,
-    'axes.formatter.useoffset': False,
-    'axes.formatter.offset_threshold': 2,
+    'axes.spines.bottom': False,    
+    # Use scientific notation
+    'axes.formatter.min_exponent': 0,  # minimum exponent to format in scientific notation
+    'axes.formatter.use_locale': True, 
+    'axes.formatter.useoffset': True, # If True, the tick label formatter
+                                      # will default to labeling ticks relative
+                                      # to an offset when the data range is
+                                      # small compared to the minimum absolute
+                                      # value of the data.
+    'axes.formatter.offset_threshold': 4, # When useoffset is True, the offset
+                                          # will be used when it can remove
+                                          # at least this number of significant
+                                          # digits from tick labels.
 
 
     'axes.prop_cycle': cycler(
@@ -890,7 +941,7 @@ jotadark = {
     'xtick.color': '#f1f1f1',
 
     # Ticks Y
-    'ytick.alignment': 'center_baseline',
+    'ytick.alignment': 'center',
     'ytick.major.size': 0.0,
     'ytick.minor.size': 0.0,
     'ytick.major.width': 1.0,
