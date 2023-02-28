@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pyc
+*.DS_Store
 
 # C extensions
 *.so
@@ -131,4 +132,4 @@ dmypy.json
 .pyre/
 
 # hidden files
-.DS_Store
+*.DS_Store
