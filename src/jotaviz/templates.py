@@ -1,7 +1,7 @@
 # LATEX
 from cycler import cycler
 
-available =['jotagray', 'jotagrey', 'jotawhite', 'jotaglass', 'jotadark', 'jotablack', 'academic']
+available =['jotagray', 'jotagrey', 'jotawhite', 'jotaglass', 'jotadark', 'jotablack', 'jotavoid', 'academic']
 
 jotagray = {
 
@@ -610,8 +610,6 @@ jotaglass = {
 }
 
 
-
-
 jotablack = {
 
     # errorbar props
@@ -1020,6 +1018,212 @@ jotadark = {
     'date.autoformatter.hour': "%H:%M",
     'date.autoformatter.minute': "%H:%M"
 }
+
+
+
+jotavoid = {
+
+    # errorbar props
+    'errorbar.capsize': 0.0,
+
+     # Patches
+    'patch.linewidth': 0.0,
+    'patch.edgecolor': 'none',
+    'patch.antialiased': True,
+    'patch.force_edgecolor': True,
+    'hatch.linewidth': 1.0,
+
+     # Fonts
+    'font.family': ['sans-serif'],
+    'font.sans-serif': ['Roboto', 'Arial', 'DejaVu Sans'],
+    'font.fantasy': ['xkcd', 'Humor Sans', 'Comic Sans MS'],  
+    'font.monospace': ['DejaVu Sans Mono', 'Computer Modern Typewriter', 'Courier'],
+    'font.serif': ['DejaVu Serif', 'Computer Modern Roman'], 
+    'font.style': 'normal',
+    'font.variant': 'normal',
+    'font.weight': 'normal',
+    'font.stretch': 'normal',
+    'font.size': 15.0,
+    'text.color': '#222222',
+    'mathtext.fontset': 'dejavuserif',
+    'mathtext.default': 'rm',
+ 
+    # Lines
+    'lines.linewidth': 4.0,
+    'lines.antialiased': True,
+    'lines.marker': 'none', 
+    'lines.markersize': 8.0,
+    'lines.solid_capstyle': 'butt',
+    'lines.dashed_pattern': [6.0, 6.0],
+    'lines.dashdot_pattern': [3.0, 5.0, 1.0, 5.0],
+    'lines.dotted_pattern': [1.0, 3.0],
+    'lines.markeredgewidth': 2.0,
+    'lines.markerfacecolor': 'auto',
+    'lines.markeredgecolor': 'auto',
+
+    # scatter props
+    'scatter.marker': 'o',
+    'markers.fillstyle': 'full', #'full' , ʼleft', 'right', 'bottom', 'top' , 'none' 
+
+     # hist props
+     'hist.bins': 10,
+
+    # Documentation for cycler (https://matplotlib.org/cycler/),
+    # Axes
+    'axes.facecolor': 'white',
+    'axes.edgecolor': 'white',
+    'axes.linewidth': 0.0,
+    'axes.labelpad': 0.0,
+    'axes.titlesize': 0.0,
+    'axes.titlepad': 0.0,
+    'axes.titleweight': 'bold',
+    'axes.titlelocation': 'center',
+    'axes.xmargin': 0.10, # change the x axis so there is no white space at the end
+    'axes.ymargin': 0.10, # change the y axis so there is no white space at the end
+    'axes.labelsize': 0.0,
+    'axes.labelweight': 'normal',
+    'axes.labelcolor': 'none',
+    'axes.axisbelow': True,
+    'axes.autolimit_mode': 'round_numbers',
+    'axes.unicode_minus': True,
+    'axes.spines.left': False,
+    'axes.spines.right': False,
+    'axes.spines.top': False,
+    'axes.spines.bottom': False,
+    # Use scientific notation
+    'axes.formatter.min_exponent': 0,  # minimum exponent to format in scientific notation
+    'axes.formatter.use_locale': True, 
+    'axes.formatter.useoffset': True, # If True, the tick label formatter
+                                      # will default to labeling ticks relative
+                                      # to an offset when the data range is
+                                      # small compared to the minimum absolute
+                                      # value of the data.
+    'axes.formatter.offset_threshold': 4, # When useoffset is True, the offset
+                                          # will be used when it can remove
+                                          # at least this number of significant
+                                          # digits from tick labels.
+
+
+    'axes.prop_cycle': cycler(
+        color=[
+            'tab:red',
+            'tab:blue',
+            'tab:green',
+            'tab:orange',
+            'tab:purple',
+            'tab:brown',
+            'tab:pink',
+            'tab:gray',
+            'tab:olive',
+            'tab:cyan',
+            'k',
+        ]
+    ),
+    # Grid
+    'axes.grid': False,
+    'axes3d.grid': False,
+    'grid.color': 'k',
+    'grid.alpha': 0.0,
+    'grid.linewidth': 0.0,
+    'grid.linestyle': ':',
+
+     # Ticks X
+    'xtick.alignment': 'center',
+    'xtick.major.size': 0.0, # major tick length in points
+    'xtick.minor.size': 0.0, # minor tick length in points
+    'xtick.major.width': 0.0,  # major tick width in points
+    'xtick.minor.width': 0.0,  # minor tick width in points
+    'xtick.major.pad': 0.0, # distance to major tick label in points
+    'xtick.minor.pad': 0.0, # distance to the minor tick label in points
+    'xtick.minor.visible': False, 
+    'xtick.top': False,
+    'xtick.labelsize': 0.0, # fontsize of the tick labels
+    'xtick.direction': 'in',  # direction: in, out, or inout
+    'xtick.color': 'none',
+
+    # Ticks Y
+    'ytick.alignment': 'center',
+    'ytick.major.size': 0.0,
+    'ytick.minor.size': 0.0,
+    'ytick.major.width': 0.0,
+    'ytick.minor.width': 0.0,
+    'ytick.major.pad': 0.0,
+    'ytick.minor.pad': 0.0,
+    'ytick.minor.visible': False,
+    'ytick.right': False,
+    'ytick.left': False,
+    'ytick.labelsize': 0.0,
+    'ytick.color': 'none',
+    'ytick.direction': 'out',  # direction: in, out, or inout
+
+     # Images
+    'image.aspect': 'equal',
+    'image.cmap': 'gist_heat',
+    'image.origin': 'upper',
+
+    # Figure
+    'figure.figsize': [11.72, 9.72],
+    'figure.facecolor': 'white',
+    'figure.edgecolor': 'white',
+    'figure.subplot.hspace': 0.156,
+    'figure.subplot.wspace': 0.156,
+    'figure.subplot.left': 0.177,
+    'figure.subplot.right': 0.946,
+    'figure.subplot.bottom': 0.156,
+    'figure.subplot.top': 0.965,
+    'figure.titlesize': 28.0,
+    'figure.titleweight': 'bold',
+
+    # set savefig
+    'savefig.dpi': 100.0,
+    'savefig.bbox': 'tight',
+    'savefig.pad_inches': 0.03, # Use virtually all space when we specify figure dimensions
+    'savefig.format': 'png',
+    'savefig.facecolor': 'none',
+    'savefig.edgecolor': 'none',
+    'savefig.transparent': True,
+    'figure.constrained_layout.use': True,
+    'pdf.fonttype': 3,  # Output Type 3 (Type3) or Type 42 (TrueType)
+    'svg.fonttype': 'none',
+    'svg.fonttype': 'path',
+    'svg.hashsalt': None,
+    'svg.image_inline': True,
+
+    # Legend
+    'legend.loc': 'best',
+    'legend.fancybox': True,
+    'legend.frameon': True,
+    'legend.framealpha': 0.7,
+    'legend.numpoints': 1,
+    'legend.scatterpoints': 1,
+    'legend.title_fontsize': 'medium',
+    'legend.fontsize': 'medium',
+    'legend.borderpad': 0.5,  
+    'legend.markerscale': 1.0,  
+    'legend.labelspacing': 0.3, 
+    'legend.columnspacing': 0.5, 
+    'legend.borderaxespad': 0.5,
+    'legend.handlelength': 0.5, 
+    'legend.handleheight': 0.5, 
+    'legend.handletextpad': 0.5,
+    'legend.facecolor': 'inherit',
+    'legend.edgecolor': 'inherit',
+
+    'boxplot.boxprops.color': '#555555',
+    'boxplot.capprops.color': '#555555',
+    'boxplot.flierprops.color': '#555555',
+    'boxplot.flierprops.markeredgecolor': '#555555',
+    'boxplot.whiskerprops.color': '#555555',
+
+    # Date
+    'date.autoformatter.year': "%Y",
+    'date.autoformatter.month': "%b",
+    'date.autoformatter.day': "%d",
+    'date.autoformatter.hour': "%H:%M",
+    'date.autoformatter.minute': "%H:%M"
+}
+
+
 
 
 academic = {

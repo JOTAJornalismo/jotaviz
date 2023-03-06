@@ -10,7 +10,7 @@ packages = [{include = "jotaviz"}]
 include = ["fonts/*.ttf"]
 
 [tool.poetry.dependencies]
-python = ">=3.8.5"
+python = ">=3.8.1"
 
 
 [tool.poetry.scripts]
