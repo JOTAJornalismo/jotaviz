@@ -43,7 +43,7 @@ with plt.style.context(['jotaviz']):
     plt.savefig('{}/fig1'.format(save_dir), dpi=300)
 
 
-with plt.style.context(['jotaviz-white']):
+with plt.style.context(['jotawhite']):
     fig, ax = plt.subplots()
     for i, m in enumerate([1.0, 5.0, 10.0, 20.0, 25.0, 50.0]):
         ax.plot(x, g(x, m), label='m = ' + str(m))
@@ -52,7 +52,7 @@ with plt.style.context(['jotaviz-white']):
     plt.savefig('{}/fig2'.format(save_dir), dpi=300)
 
 
-with plt.style.context(['jotaviz-black']):
+with plt.style.context(['jotablack']):
     fig, ax = plt.subplots()
     for i, m in enumerate([1.0, 5.0, 10.0, 20.0, 25.0, 50.0]):
         ax.plot(x, g(x, m), label='m = ' + str(m))
@@ -61,13 +61,23 @@ with plt.style.context(['jotaviz-black']):
     plt.savefig('{}/fig3'.format(save_dir), dpi=300)
     
     
-with plt.style.context(['jotaviz', 'dark_background']):
+with plt.style.context(['jotadark']):
     fig, ax = plt.subplots()
     for i, m in enumerate([1.0, 5.0, 10.0, 20.0, 25.0, 50.0]):
         ax.plot(x, g(x, m), label='m = ' + str(m))
         ax.set(**pparams)
         ax.legend(bbox_to_anchor=(0.6, 1.0, 0.2, 0.1), ncol=3)
     plt.savefig('{}/fig5'.format(save_dir), dpi=300)
+
+
+
+with plt.style.context(['jotavoid']):
+    fig, ax = plt.subplots()
+    for i, m in enumerate([1.0, 5.0, 10.0, 20.0, 25.0, 50.0]):
+        ax.plot(x, g(x, m), label='m = ' + str(m))
+        ax.set(**pparams)
+        ax.legend(bbox_to_anchor=(0.6, 1.0, 0.2, 0.1), ncol=3)
+    plt.savefig('{}/fig7'.format(save_dir), dpi=300)
 
 
 
