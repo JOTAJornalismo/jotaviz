@@ -1225,7 +1225,6 @@ jotavoid = {
 
 
 
-
 academic = {
     "text.usetex": True,
     # "text.latex.preamble": "\usepackage\{amsmath\}",

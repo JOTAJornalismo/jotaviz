@@ -14,15 +14,19 @@ class Style:
         if style_name in plt.style.available:
             self.style = plt.style.use(style_name)
         if style_name in templates.available:
-            stylesheet = self.get_template(style_name)
+            stylesheet = self.get_style(style_name)
             self.style = plt.style.use(stylesheet)
         else:
             print('WARNING: Given name |{}| is not a valid style name. Therefore matplotlib default will be used'.format(style_name))
             self.style = plt.style.use("default")
+
+    def get_styles(self) -> str:
+        """Print available styles."""
+        print(templates.available)
     
-    def get_template(self,template_name):
-        if template_name in templates.available:
-            attribute = getattr(templates,template_name)
+    def get_style(self,style_name):
+        if style_name in templates.available:
+            attribute = getattr(templates,style_name)
             return attribute
         else:
             print('WARNING: Given name |{}| is not a valid template name. Therefore matplotlib default will be used'.format(template_name))
