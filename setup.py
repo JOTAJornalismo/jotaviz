@@ -1,39 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
+import setuptools
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 import warnings
 import os
 import sys
-import jotaviz
-
-VERSION = jotaviz.__version__
-
-with open('README.md') as readme_file:
-    README = readme_file.read()
-
-INSTALL_REQUIRES = ['matplotlib',
-                    'pandas',
-                    'numpy',
-                    'scipy',
-                    'pillow',
-                    ]
-
-
-# Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
-CLASSIFIERS = ['Development Status :: 3 - Alpha',
-               'Intended Audience :: Science/Research',
-               'License :: OSI Approved :: MIT License',
-               'Operating System :: OS Independent',
-			   'Framework :: Matplotlib',
-               'Programming Language :: Python :: 3 :: Only',
-               'Topic :: Scientific/Engineering :: Visualization']
-
 
 #Set up the machinery to install custom fonts.
-class move_ttf(install):
+class MoveFonts(install):
     def run(self):
         """
         Performs the usual install process and then copies the True Type fonts 
@@ -73,28 +49,10 @@ class move_ttf(install):
                     os.remove(fontList_path)
                     print("Deleted the matplotlib " + font_list_cache_name)
         except:
-            warnings.warn("WARNING: An issue occured while installing the custom fonts for clearplot.")
-            
+            warnings.warn("WARNING: An issue occured while installing the custom fonts for jotaviz.")
 
 
-setup(
-      name='jotaviz',
-      version=VERSION,
-      description='A Python package for data visualization styles and plots used at https://jota.info',
-      long_description_content_type="text/markdown",
-      long_description=README,
-      classifiers=CLASSIFIERS,
-      url='https://github.com/JOTAJornalismo/jotaviz/',
-      author='Daniel Marcelino',
-      author_email='daniel.marcelino@jota.info',
-      author_twitter='@dmarcelinobr',
-      license='MIT',
-      package_dir={"": "src"},
-      packages=find_packages(where="src"),
-      #Specify any non-python files to be distributed with the package
-      package_data = {'' : ['fonts/*.ttf']},
-      python_requires='>=3.8.1',
-      install_requires=INSTALL_REQUIRES,
-      zip_safe=False,
-      #Specify the custom install class
-      cmdclass={'install' : move_ttf})
+if __name__ == "__main__":
+    setuptools.setup(name="jotaviz", 
+                     package_data = {"" : ["fonts/*.ttf"]}, 
+                     cmdclass={"install" : MoveFonts})
