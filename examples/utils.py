@@ -13,3 +13,4 @@ def make_patch_spines_invisible(ax):
     ax.patch.set_visible(False)
     for sp in ax.spines.values():
         sp.set_visible(False)
+

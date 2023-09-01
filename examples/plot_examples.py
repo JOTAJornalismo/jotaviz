@@ -9,6 +9,17 @@ import jotaviz
 
 from utils import is_exist_dir, make_patch_spines_invisible
 
+
+def neon_plot(x, y, ax=None):
+    if ax is None:
+        ax = plt.gca()
+    line, = ax.plot(x, y, lw=1, zorder=6)
+    for cont in range(6, 1, -1):
+        ax.plot(x, y, lw=cont, color=line.get_color(), zorder=5,
+                alpha=0.05)
+    return ax
+
+
 def test_plotting_working():
     plt.style.use("jotaviz")
     values = {c: [random.randint(0, 10) for _ in range(7)] for c in 'ABCDEF'}
@@ -20,6 +31,7 @@ def test_plotting_working():
     plt.savefig("figures/test.png")
 
 
+import os
 
 def g(x, m, L=1.0):
     return (np.cosh(m*(L-x))) / np.cosh(m*L)
@@ -79,6 +91,41 @@ with plt.style.context(['jotavoid']):
         ax.legend(bbox_to_anchor=(0.6, 1.0, 0.2, 0.1), ncol=3)
     plt.savefig('{}/fig7'.format(save_dir), dpi=300)
 
+
+
+with plt.style.context(['jotaneon']):
+    # Plotting
+    x = np.linspace(0, 4, 100)
+    y = np.sin(np.pi*x + 1e-6)/(np.pi*x + 1e-6)
+    fig, ax = plt.figure(figsize=(6.4, 4.8))
+    for cont in range(5):
+        neon_plot(x, y/(cont + 1))
+    plt.xlabel("One axis")
+    plt.ylabel("The other axis")
+    plt.grid(zorder=3, alpha=0.2)
+    plt.savefig('{}/fig8'.format(save_dir), dpi=300)
+
+
+
+
+import matplotlib.animation as animation
+
+
+def update(data):
+    line.set_ydata(data)
+    return line,
+
+npts = 100
+niter = 100
+x = np.linspace(0, np.pi, npts)
+t = np.linspace(0, np.pi, niter)
+X, T = np.meshgrid(x, t)
+Y = np.sin(3*X) * np.cos(4*T)
+fig, ax = plt.subplots()
+line, = ax.plot(x, Y[0, :])
+ani = animation.FuncAnimation(fig, update, Y, repeat=False)
+ani.save("sine.gif", writer='imagemagick', dpi=100)
+plt.show()
 
 
 import numpy as np
