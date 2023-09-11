@@ -12,9 +12,9 @@ classifiers = [
   "Development Status :: 3 - Beta",
   "Intended Audience :: Science/Research",
   "Natural Language :: English",
-  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
   "Operating System :: MacOS :: MacOS X",
   "Operating System :: Microsoft :: Windows",
   "Operating System :: POSIX :: Linux",
@@ -34,7 +34,7 @@ version = "1.4.1"
 
 [tool.poetry.dependencies]
 importlib-metadata = {version = "^1.0", python = "<3.9"}
-python = ">=3.8.1,<4.0"
+python = ">=3.9,<4.0"
 pandas = "*"
 numpy = "*"
 scipy = "*"
